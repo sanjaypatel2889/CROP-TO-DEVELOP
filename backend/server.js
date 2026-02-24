@@ -26,8 +26,11 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 // ============================================================
 
-// Enable CORS for all origins
-app.use(cors());
+// Enable CORS
+app.use(cors({
+    origin: process.env.FRONTEND_URL || true,
+    credentials: true
+}));
 
 // Parse JSON request bodies with a 10MB limit
 app.use(express.json({ limit: '10mb' }));

@@ -11,6 +11,8 @@ import {
   Beaker,
   AlertTriangle,
   ImageIcon,
+  Sparkles,
+  Eye,
 } from 'lucide-react'
 import { useTheme } from '../context/ThemeContext'
 import { useFarmer } from '../context/FarmerContext'
@@ -70,6 +72,7 @@ export default function DiseaseDetector() {
   const [imageFile, setImageFile] = useState(null)
   const [imagePreview, setImagePreview] = useState(null)
   const [expandedMatch, setExpandedMatch] = useState(0)
+  const [isDragging, setIsDragging] = useState(false)
 
   const toggleSymptom = (symptom) => {
     setSymptoms((prev) =>
@@ -79,14 +82,38 @@ export default function DiseaseDetector() {
     )
   }
 
-  const handleImageChange = (e) => {
-    const file = e.target.files?.[0]
-    if (file) {
+  const handleFile = (file) => {
+    if (file && file.type.startsWith('image/')) {
       setImageFile(file)
       const reader = new FileReader()
       reader.onload = (ev) => setImagePreview(ev.target.result)
       reader.readAsDataURL(file)
     }
+  }
+
+  const handleImageChange = (e) => {
+    const file = e.target.files?.[0]
+    if (file) handleFile(file)
+  }
+
+  const handleDragOver = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setIsDragging(true)
+  }
+
+  const handleDragLeave = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setIsDragging(false)
+  }
+
+  const handleDrop = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setIsDragging(false)
+    const file = e.dataTransfer.files?.[0]
+    if (file) handleFile(file)
   }
 
   const removeImage = () => {
@@ -143,7 +170,7 @@ export default function DiseaseDetector() {
             Crop Disease Detector
           </h1>
           <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-            Identify diseases from symptoms and get treatment recommendations
+            Upload an image or describe symptoms to identify diseases
           </p>
         </div>
       </div>
@@ -342,10 +369,13 @@ export default function DiseaseDetector() {
               onChange={(e) => setRecentWeather(e.target.value)}
             />
 
-            {/* Image Upload */}
+            {/* Image Upload with Drag & Drop */}
             <div className="space-y-2">
               <label className={`block text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                Upload Image (Optional)
+                Upload Image
+                <span className={`ml-1 text-xs font-normal ${isDark ? 'text-purple-400' : 'text-purple-600'}`}>
+                  (AI-powered analysis)
+                </span>
               </label>
               {imagePreview ? (
                 <div className="relative inline-block">
@@ -366,17 +396,41 @@ export default function DiseaseDetector() {
                 <button
                   type="button"
                   onClick={() => fileInputRef.current?.click()}
+                  onDragOver={handleDragOver}
+                  onDragLeave={handleDragLeave}
+                  onDrop={handleDrop}
                   className={`
                     w-full flex flex-col items-center gap-2 p-6 rounded-xl border-2 border-dashed
                     transition-all duration-200 cursor-pointer
-                    ${isDark
-                      ? 'border-white/[0.15] text-gray-400 hover:border-emerald-500/40 hover:bg-white/[0.04]'
-                      : 'border-gray-300 text-gray-500 hover:border-emerald-400 hover:bg-emerald-50/50'
+                    ${isDragging
+                      ? isDark
+                        ? 'border-purple-500/60 bg-purple-500/10 scale-[1.02]'
+                        : 'border-purple-400 bg-purple-50 scale-[1.02]'
+                      : isDark
+                        ? 'border-white/[0.15] text-gray-400 hover:border-purple-500/40 hover:bg-white/[0.04]'
+                        : 'border-gray-300 text-gray-500 hover:border-purple-400 hover:bg-purple-50/50'
                     }
                   `}
                 >
-                  <ImageIcon className="w-8 h-8" />
-                  <span className="text-sm">Click to upload an image of the affected crop</span>
+                  <div className={`p-3 rounded-full ${isDragging
+                    ? isDark ? 'bg-purple-500/20' : 'bg-purple-100'
+                    : isDark ? 'bg-white/[0.06]' : 'bg-gray-100'
+                  }`}>
+                    {isDragging ? (
+                      <Upload className={`w-8 h-8 ${isDark ? 'text-purple-400' : 'text-purple-500'}`} />
+                    ) : (
+                      <ImageIcon className={`w-8 h-8 ${isDark ? 'text-gray-500' : 'text-gray-400'}`} />
+                    )}
+                  </div>
+                  <span className={`text-sm font-medium ${isDragging
+                    ? isDark ? 'text-purple-400' : 'text-purple-600'
+                    : ''
+                  }`}>
+                    {isDragging ? 'Drop your image here' : 'Drag & drop or click to upload'}
+                  </span>
+                  <span className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
+                    AI will analyze the image to detect diseases
+                  </span>
                 </button>
               )}
               <input
@@ -392,7 +446,7 @@ export default function DiseaseDetector() {
             <div className="flex gap-3 pt-2">
               <Button type="submit" size="lg" loading={loading} disabled={!cropName.trim()} className="flex-1">
                 <Search className="w-4 h-4" />
-                Detect Disease
+                {imageFile ? 'Analyze & Detect' : 'Detect Disease'}
               </Button>
               <Button type="button" variant="ghost" size="lg" onClick={handleReset}>
                 Reset
@@ -409,8 +463,13 @@ export default function DiseaseDetector() {
               <div className="flex flex-col items-center justify-center py-12 gap-4">
                 <LoadingSpinner size="lg" />
                 <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                  Analyzing symptoms...
+                  {imageFile ? 'Analyzing image with AI...' : 'Analyzing symptoms...'}
                 </p>
+                {imageFile && (
+                  <p className={`text-xs ${isDark ? 'text-purple-400' : 'text-purple-600'}`}>
+                    This may take a few seconds for AI analysis
+                  </p>
+                )}
               </div>
             </GlassCard>
           )}
@@ -432,7 +491,7 @@ export default function DiseaseDetector() {
                     No results yet
                   </p>
                   <p className={`text-sm mt-1 ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
-                    Fill in symptoms and click Detect to see results
+                    Upload an image or fill in symptoms and click Detect
                   </p>
                 </div>
               </div>
@@ -469,131 +528,267 @@ export default function DiseaseDetector() {
                 </div>
               </GlassCard>
 
-              {/* Match Cards */}
-              {results.topMatches && results.topMatches.length > 0 ? (
-                results.topMatches.map((match, index) => (
-                  <GlassCard key={index} hover={false}>
-                    {/* Header - always visible */}
-                    <button
-                      type="button"
-                      onClick={() => setExpandedMatch(expandedMatch === index ? -1 : index)}
-                      className="w-full text-left"
-                    >
-                      <div className="flex items-start justify-between gap-3">
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-2 flex-wrap">
-                            <h3 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                              {match.name}
-                            </h3>
-                            {match.nameHindi && (
-                              <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
-                                ({match.nameHindi})
-                              </span>
-                            )}
-                          </div>
-
-                          {/* Confidence Bar */}
-                          {match.confidence !== undefined && (
-                            <div className="mt-2 flex items-center gap-3">
-                              <div className={`flex-1 h-2.5 rounded-full overflow-hidden ${isDark ? 'bg-white/10' : 'bg-gray-200'}`}>
-                                <div
-                                  className={`h-full rounded-full transition-all duration-500 ${
-                                    match.confidence >= 70
-                                      ? 'bg-emerald-500'
-                                      : match.confidence >= 40
-                                        ? 'bg-orange-500'
-                                        : 'bg-red-500'
-                                  }`}
-                                  style={{ width: `${Math.min(match.confidence, 100)}%` }}
-                                />
-                              </div>
-                              <span className={`text-sm font-medium min-w-[3rem] text-right ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                                {match.confidence}%
-                              </span>
-                            </div>
-                          )}
-
-                          {/* Pathogen Badge */}
-                          {match.pathogenType && (
-                            <div className="mt-2">
-                              <Badge color="purple" size="sm">
-                                {match.pathogenType}
-                              </Badge>
-                            </div>
-                          )}
+              {/* AI Vision Analysis Card */}
+              {results.imageAnalysis && (
+                <GlassCard hover={false}>
+                  <div className="space-y-4">
+                    {/* AI Header */}
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <div className={`p-2 rounded-lg ${isDark ? 'bg-purple-500/20' : 'bg-purple-100'}`}>
+                          <Sparkles className={`w-5 h-5 ${isDark ? 'text-purple-400' : 'text-purple-600'}`} />
                         </div>
-                        <div className={`p-1 rounded-lg ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
-                          {expandedMatch === index ? (
-                            <ChevronUp className="w-5 h-5" />
-                          ) : (
-                            <ChevronDown className="w-5 h-5" />
+                        <div>
+                          <h3 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
+                            {results.imageAnalysis.diseaseName}
+                          </h3>
+                          {results.imageAnalysis.cropName && (
+                            <span className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
+                              Detected on: {results.imageAnalysis.cropName}
+                            </span>
                           )}
                         </div>
                       </div>
-                    </button>
+                      <Badge color="purple" size="sm">
+                        <Sparkles className="w-3 h-3 mr-1" />
+                        AI Vision
+                      </Badge>
+                    </div>
 
-                    {/* Expanded Content */}
-                    {expandedMatch === index && (
-                      <div className={`mt-4 pt-4 border-t space-y-4 ${isDark ? 'border-white/10' : 'border-gray-200'}`}>
-                        {/* Treatment */}
-                        {match.treatment && match.treatment.length > 0 && (
-                          <div>
-                            <h4 className={`flex items-center gap-2 text-sm font-semibold mb-2 ${isDark ? 'text-emerald-400' : 'text-emerald-600'}`}>
-                              <Beaker className="w-4 h-4" />
-                              Treatment
-                            </h4>
-                            <ol className={`list-decimal list-inside space-y-1.5 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                              {match.treatment.map((step, i) => (
-                                <li key={i}>{step}</li>
-                              ))}
-                            </ol>
-                          </div>
-                        )}
-
-                        {/* Prevention */}
-                        {match.prevention && match.prevention.length > 0 && (
-                          <div>
-                            <h4 className={`flex items-center gap-2 text-sm font-semibold mb-2 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
-                              <Shield className="w-4 h-4" />
-                              Prevention Tips
-                            </h4>
-                            <ul className={`list-disc list-inside space-y-1.5 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                              {match.prevention.map((tip, i) => (
-                                <li key={i}>{tip}</li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-
-                        {/* Organic Alternatives */}
-                        {match.organicTreatment && match.organicTreatment.length > 0 && (
-                          <div>
-                            <h4 className={`flex items-center gap-2 text-sm font-semibold mb-2 ${isDark ? 'text-green-400' : 'text-green-600'}`}>
-                              <Leaf className="w-4 h-4" />
-                              Organic Alternatives
-                            </h4>
-                            <ul className={`list-disc list-inside space-y-1.5 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                              {match.organicTreatment.map((alt, i) => (
-                                <li key={i}>{alt}</li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
+                    {/* Confidence Bar */}
+                    {results.imageAnalysis.confidence !== undefined && (
+                      <div className="flex items-center gap-3">
+                        <span className={`text-xs font-medium ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>Confidence</span>
+                        <div className={`flex-1 h-2.5 rounded-full overflow-hidden ${isDark ? 'bg-white/10' : 'bg-gray-200'}`}>
+                          <div
+                            className="h-full rounded-full transition-all duration-500 bg-purple-500"
+                            style={{ width: `${Math.min(results.imageAnalysis.confidence, 100)}%` }}
+                          />
+                        </div>
+                        <span className={`text-sm font-medium min-w-[3rem] text-right ${isDark ? 'text-purple-400' : 'text-purple-600'}`}>
+                          {results.imageAnalysis.confidence}%
+                        </span>
                       </div>
                     )}
-                  </GlassCard>
-                ))
-              ) : (
-                <GlassCard hover={false}>
-                  <div className="text-center py-8">
-                    <p className={`font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                      No diseases matched the given symptoms
-                    </p>
-                    <p className={`text-sm mt-1 ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
-                      Try adding more symptoms or adjusting your input
-                    </p>
+
+                    {/* Description */}
+                    {results.imageAnalysis.description && (
+                      <p className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                        {results.imageAnalysis.description}
+                      </p>
+                    )}
+
+                    {/* Pathogen & Severity badges */}
+                    <div className="flex gap-2 flex-wrap">
+                      {results.imageAnalysis.pathogenType && (
+                        <Badge color="purple" size="sm">{results.imageAnalysis.pathogenType}</Badge>
+                      )}
+                      {results.imageAnalysis.severity && (
+                        <Badge color={severityConfig[results.imageAnalysis.severity]?.color || 'gray'} size="sm">
+                          {results.imageAnalysis.severity}
+                        </Badge>
+                      )}
+                    </div>
+
+                    {/* Symptoms from AI */}
+                    {results.imageAnalysis.symptoms && results.imageAnalysis.symptoms.length > 0 && (
+                      <div>
+                        <h4 className={`flex items-center gap-2 text-sm font-semibold mb-2 ${isDark ? 'text-purple-400' : 'text-purple-600'}`}>
+                          <Eye className="w-4 h-4" />
+                          Detected Symptoms
+                        </h4>
+                        <ul className={`list-disc list-inside space-y-1 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                          {results.imageAnalysis.symptoms.map((s, i) => (
+                            <li key={i}>{s}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* Treatment from AI */}
+                    {results.imageAnalysis.treatment && results.imageAnalysis.treatment.length > 0 && (
+                      <div>
+                        <h4 className={`flex items-center gap-2 text-sm font-semibold mb-2 ${isDark ? 'text-emerald-400' : 'text-emerald-600'}`}>
+                          <Beaker className="w-4 h-4" />
+                          Recommended Treatment
+                        </h4>
+                        <ol className={`list-decimal list-inside space-y-1.5 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                          {results.imageAnalysis.treatment.map((step, i) => (
+                            <li key={i}>{step}</li>
+                          ))}
+                        </ol>
+                      </div>
+                    )}
+
+                    {/* Prevention from AI */}
+                    {results.imageAnalysis.prevention && results.imageAnalysis.prevention.length > 0 && (
+                      <div>
+                        <h4 className={`flex items-center gap-2 text-sm font-semibold mb-2 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
+                          <Shield className="w-4 h-4" />
+                          Prevention Tips
+                        </h4>
+                        <ul className={`list-disc list-inside space-y-1.5 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                          {results.imageAnalysis.prevention.map((tip, i) => (
+                            <li key={i}>{tip}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* Organic Treatment from AI */}
+                    {results.imageAnalysis.organicTreatment && results.imageAnalysis.organicTreatment.length > 0 && (
+                      <div>
+                        <h4 className={`flex items-center gap-2 text-sm font-semibold mb-2 ${isDark ? 'text-green-400' : 'text-green-600'}`}>
+                          <Leaf className="w-4 h-4" />
+                          Organic Alternatives
+                        </h4>
+                        <ul className={`list-disc list-inside space-y-1.5 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                          {results.imageAnalysis.organicTreatment.map((alt, i) => (
+                            <li key={i}>{alt}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 </GlassCard>
+              )}
+
+              {/* DB Match Cards */}
+              {results.topMatches && results.topMatches.length > 0 ? (
+                <>
+                  {results.imageAnalysis && (
+                    <div className={`flex items-center gap-2 px-1 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
+                      <div className={`flex-1 h-px ${isDark ? 'bg-white/10' : 'bg-gray-200'}`} />
+                      <span className="text-xs font-medium uppercase tracking-wider">Database Matches</span>
+                      <div className={`flex-1 h-px ${isDark ? 'bg-white/10' : 'bg-gray-200'}`} />
+                    </div>
+                  )}
+                  {results.topMatches.map((match, index) => (
+                    <GlassCard key={index} hover={false}>
+                      {/* Header - always visible */}
+                      <button
+                        type="button"
+                        onClick={() => setExpandedMatch(expandedMatch === index ? -1 : index)}
+                        className="w-full text-left"
+                      >
+                        <div className="flex items-start justify-between gap-3">
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-2 flex-wrap">
+                              <h3 className={`text-lg font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
+                                {match.name}
+                              </h3>
+                              {match.nameHindi && (
+                                <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
+                                  ({match.nameHindi})
+                                </span>
+                              )}
+                            </div>
+
+                            {/* Confidence Bar */}
+                            {match.confidence !== undefined && (
+                              <div className="mt-2 flex items-center gap-3">
+                                <div className={`flex-1 h-2.5 rounded-full overflow-hidden ${isDark ? 'bg-white/10' : 'bg-gray-200'}`}>
+                                  <div
+                                    className={`h-full rounded-full transition-all duration-500 ${
+                                      match.confidence >= 70
+                                        ? 'bg-emerald-500'
+                                        : match.confidence >= 40
+                                          ? 'bg-orange-500'
+                                          : 'bg-red-500'
+                                    }`}
+                                    style={{ width: `${Math.min(match.confidence, 100)}%` }}
+                                  />
+                                </div>
+                                <span className={`text-sm font-medium min-w-[3rem] text-right ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                                  {match.confidence}%
+                                </span>
+                              </div>
+                            )}
+
+                            {/* Pathogen Badge */}
+                            {match.pathogenType && (
+                              <div className="mt-2">
+                                <Badge color="purple" size="sm">
+                                  {match.pathogenType}
+                                </Badge>
+                              </div>
+                            )}
+                          </div>
+                          <div className={`p-1 rounded-lg ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
+                            {expandedMatch === index ? (
+                              <ChevronUp className="w-5 h-5" />
+                            ) : (
+                              <ChevronDown className="w-5 h-5" />
+                            )}
+                          </div>
+                        </div>
+                      </button>
+
+                      {/* Expanded Content */}
+                      {expandedMatch === index && (
+                        <div className={`mt-4 pt-4 border-t space-y-4 ${isDark ? 'border-white/10' : 'border-gray-200'}`}>
+                          {/* Treatment */}
+                          {match.treatment && match.treatment.length > 0 && (
+                            <div>
+                              <h4 className={`flex items-center gap-2 text-sm font-semibold mb-2 ${isDark ? 'text-emerald-400' : 'text-emerald-600'}`}>
+                                <Beaker className="w-4 h-4" />
+                                Treatment
+                              </h4>
+                              <ol className={`list-decimal list-inside space-y-1.5 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                                {match.treatment.map((step, i) => (
+                                  <li key={i}>{step}</li>
+                                ))}
+                              </ol>
+                            </div>
+                          )}
+
+                          {/* Prevention */}
+                          {match.prevention && match.prevention.length > 0 && (
+                            <div>
+                              <h4 className={`flex items-center gap-2 text-sm font-semibold mb-2 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
+                                <Shield className="w-4 h-4" />
+                                Prevention Tips
+                              </h4>
+                              <ul className={`list-disc list-inside space-y-1.5 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                                {match.prevention.map((tip, i) => (
+                                  <li key={i}>{tip}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+
+                          {/* Organic Alternatives */}
+                          {match.organicTreatment && match.organicTreatment.length > 0 && (
+                            <div>
+                              <h4 className={`flex items-center gap-2 text-sm font-semibold mb-2 ${isDark ? 'text-green-400' : 'text-green-600'}`}>
+                                <Leaf className="w-4 h-4" />
+                                Organic Alternatives
+                              </h4>
+                              <ul className={`list-disc list-inside space-y-1.5 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                                {match.organicTreatment.map((alt, i) => (
+                                  <li key={i}>{alt}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </GlassCard>
+                  ))}
+                </>
+              ) : (
+                !results.imageAnalysis && (
+                  <GlassCard hover={false}>
+                    <div className="text-center py-8">
+                      <p className={`font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+                        No diseases matched the given symptoms
+                      </p>
+                      <p className={`text-sm mt-1 ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
+                        Try uploading an image for AI-powered analysis or adjust your symptoms
+                      </p>
+                    </div>
+                  </GlassCard>
+                )
               )}
             </div>
           )}

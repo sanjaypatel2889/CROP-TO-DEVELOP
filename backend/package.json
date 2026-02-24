@@ -5,9 +5,12 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed": "node seed.js",
+    "render-start": "node seed.js && node server.js"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "better-sqlite3": "latest",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",

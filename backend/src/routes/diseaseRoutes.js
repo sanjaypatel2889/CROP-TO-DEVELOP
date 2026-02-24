@@ -38,7 +38,7 @@ router.get('/:id', (req, res, next) => {
 });
 
 // POST /detect - Detect disease from symptoms (with optional image upload)
-router.post('/detect', upload.single('image'), (req, res, next) => {
+router.post('/detect', upload.single('image'), async (req, res, next) => {
     try {
         const {
             cropName,
@@ -82,7 +82,7 @@ router.post('/detect', upload.single('image'), (req, res, next) => {
             input.imagePath = req.file.path;
         }
 
-        const result = detectDisease(input);
+        const result = await detectDisease(input);
         res.json({ success: true, data: result });
     } catch (error) {
         next(error);

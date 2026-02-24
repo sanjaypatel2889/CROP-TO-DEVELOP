@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: kisanai-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm run render-start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GEMINI_API_KEY
+        sync: false
