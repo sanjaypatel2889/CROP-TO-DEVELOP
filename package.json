@@ -1,0 +1,13 @@
+{
+  "name": "kisanai",
+  "version": "1.0.0",
+  "description": "KisanAI - AI-Powered Farmer Advisory System",
+  "scripts": {
+    "start:backend": "cd backend && npm run dev",
+    "start:frontend": "cd frontend && npm run dev",
+    "seed": "node scripts/seedData.js",
+    "install:all": "cd backend && npm install && cd ../frontend && npm install"
+  },
+  "keywords": ["agriculture", "ai", "farmer", "advisory"],
+  "license": "MIT"
+}

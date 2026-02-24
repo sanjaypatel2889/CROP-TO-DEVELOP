@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Rajesh Kumar",
+    "phone": "9876543210",
+    "state": "Punjab",
+    "district": "Ludhiana",
+    "village": "Jagraon",
+    "land_size_hectares": 3.5,
+    "soil_type": "alluvial",
+    "primary_crop": "Wheat",
+    "irrigation_type": "tubewell",
+    "income_category": "medium"
+  },
+  {
+    "name": "Suresh Patil",
+    "phone": "9823456789",
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "village": "Katol",
+    "land_size_hectares": 5.0,
+    "soil_type": "black",
+    "primary_crop": "Cotton",
+    "irrigation_type": "drip",
+    "income_category": "medium"
+  },
+  {
+    "name": "Ram Prasad Yadav",
+    "phone": "9415678901",
+    "state": "Uttar Pradesh",
+    "district": "Lucknow",
+    "village": "Malihabad",
+    "land_size_hectares": 1.2,
+    "soil_type": "alluvial",
+    "primary_crop": "Rice",
+    "irrigation_type": "canal",
+    "income_category": "small"
+  },
+  {
+    "name": "Murugan Selvaraj",
+    "phone": "9944567890",
+    "state": "Tamil Nadu",
+    "district": "Coimbatore",
+    "village": "Pollachi",
+    "land_size_hectares": 2.0,
+    "soil_type": "red",
+    "primary_crop": "Banana",
+    "irrigation_type": "drip",
+    "income_category": "small"
+  },
+  {
+    "name": "Bhagwan Singh Rathore",
+    "phone": "9414567890",
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "village": "Chomu",
+    "land_size_hectares": 8.0,
+    "soil_type": "desert",
+    "primary_crop": "Bajra",
+    "irrigation_type": "rainfed",
+    "income_category": "marginal"
+  },
+  {
+    "name": "Lakshmi Bai Patel",
+    "phone": "9425678901",
+    "state": "Madhya Pradesh",
+    "district": "Indore",
+    "village": "Mhow",
+    "land_size_hectares": 4.0,
+    "soil_type": "black",
+    "primary_crop": "Soybean",
+    "irrigation_type": "tubewell",
+    "income_category": "medium"
+  },
+  {
+    "name": "Arun Mondal",
+    "phone": "9832456789",
+    "state": "West Bengal",
+    "district": "Kolkata",
+    "village": "Baruipur",
+    "land_size_hectares": 0.8,
+    "soil_type": "alluvial",
+    "primary_crop": "Rice",
+    "irrigation_type": "canal",
+    "income_category": "marginal"
+  },
+  {
+    "name": "Basavaraj Gowda",
+    "phone": "9845678901",
+    "state": "Karnataka",
+    "district": "Dharwad",
+    "village": "Hubli",
+    "land_size_hectares": 6.0,
+    "soil_type": "red",
+    "primary_crop": "Maize",
+    "irrigation_type": "sprinkler",
+    "income_category": "medium"
+  }
+]

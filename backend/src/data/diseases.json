@@ -1,0 +1,1290 @@
+[
+  {
+    "name": "Rice Blast",
+    "name_hindi": "Dhan ka Blast",
+    "crop_name": "Rice",
+    "pathogen_type": "fungal",
+    "symptoms": ["Diamond-shaped lesions on leaves", "Gray center with dark brown borders", "Neck rot causing white empty grains", "Nodes turn blackish and break"],
+    "leaf_indicators": {
+      "colors": ["gray", "white", "brown"],
+      "shapes": ["diamond", "elliptical"],
+      "patterns": ["spots_with_borders"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few spots on lower leaves, < 5% leaf area affected"},
+      {"level": "moderate", "description": "Multiple diamond spots on many leaves, 5-25% leaf area affected"},
+      {"level": "severe", "description": "Neck blast visible, white ears, > 25% area affected, yield loss > 50%"}
+    ],
+    "favorable_conditions": {"temp_min": 20, "temp_max": 30, "humidity_min": 80, "rainfall": true},
+    "treatment": ["Apply Tricyclazole 75% WP @ 0.6g/L", "Spray Carbendazim 50% WP @ 1g/L", "Isoprothiolane 40% EC @ 1.5ml/L"],
+    "prevention": ["Use blast-resistant varieties (Pusa Basmati 1, IR-64)", "Avoid excess nitrogen fertilization", "Maintain proper spacing", "Use certified seed treated with fungicide"],
+    "organic_treatment": ["Neem oil 3ml/L spray", "Trichoderma viride soil treatment @ 2.5 kg/ha", "Pseudomonas fluorescens spray @ 5g/L"],
+    "image_keywords": "diamond spots, gray center, brown border, neck rot",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Bacterial Leaf Blight",
+    "name_hindi": "Dhan ka Jivanu Patti Angmari",
+    "crop_name": "Rice",
+    "pathogen_type": "bacterial",
+    "symptoms": ["Yellow to white lesions along leaf veins", "Lesions start from leaf tip and spread downward", "Wavy leaf margins turn yellow then gray", "Bacterial ooze visible as milky droplets in morning"],
+    "leaf_indicators": {
+      "colors": ["yellow", "white", "gray"],
+      "shapes": ["streaks", "wavy"],
+      "patterns": ["vein_parallel", "tip_to_base"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Yellowing on leaf tips of few tillers, < 10% affected"},
+      {"level": "moderate", "description": "Lesions cover 10-30% of leaf area, multiple tillers affected"},
+      {"level": "severe", "description": "Entire leaves dry up, > 30% canopy affected, kresek (wilting) in seedlings"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 34, "humidity_min": 70, "rainfall": true},
+    "treatment": ["Spray Streptomycin sulphate + Tetracycline (300 ppm)", "Copper oxychloride 50% WP @ 2.5g/L", "Drain excess water from fields"],
+    "prevention": ["Use resistant varieties (Improved Samba Mahsuri)", "Balanced fertilization, avoid excess N", "Clip seedling leaf tips before transplanting", "Avoid field-to-field water flow"],
+    "organic_treatment": ["Spray neem oil 5ml/L", "Apply Pseudomonas fluorescens @ 5g/L", "Phytosanitation - remove infected debris"],
+    "image_keywords": "yellow streaks, wavy margins, leaf tip drying, bacterial ooze",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Sheath Blight",
+    "name_hindi": "Dhan ka Sheath Blight",
+    "crop_name": "Rice",
+    "pathogen_type": "fungal",
+    "symptoms": ["Oval or irregular greenish-gray lesions on leaf sheath", "Lesions enlarge with gray-white center and brown margin", "Several lesions coalesce covering entire sheath", "Sclerotia (small round brown bodies) visible on lesions"],
+    "leaf_indicators": {
+      "colors": ["gray-white", "brown", "green-gray"],
+      "shapes": ["oval", "irregular"],
+      "patterns": ["banded", "concentric"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Lesions on lower sheaths only, < 20% relative lesion height"},
+      {"level": "moderate", "description": "Lesions extending to middle leaves, 20-45% relative lesion height"},
+      {"level": "severe", "description": "Lesions on flag leaf sheath, > 45% height, lodging and chaffy grains"}
+    ],
+    "favorable_conditions": {"temp_min": 28, "temp_max": 32, "humidity_min": 85, "rainfall": true},
+    "treatment": ["Spray Hexaconazole 5% EC @ 2ml/L", "Validamycin 3% L @ 2ml/L", "Propiconazole 25% EC @ 1ml/L"],
+    "prevention": ["Avoid dense planting", "Use moderate nitrogen doses", "Proper water management", "Destroy crop residues after harvest"],
+    "organic_treatment": ["Trichoderma harzianum @ 2.5 kg/ha in soil", "Neem cake @ 150 kg/ha", "Pseudomonas fluorescens foliar spray"],
+    "image_keywords": "oval gray lesions, brown margin, sheath banding, sclerotia",
+    "affected_plant_part": "sheath"
+  },
+  {
+    "name": "Wheat Rust (Yellow/Stripe)",
+    "name_hindi": "Gehun ki Peeli Geru",
+    "crop_name": "Wheat",
+    "pathogen_type": "fungal",
+    "symptoms": ["Yellow-orange pustules in stripes along leaf veins", "Pustules arranged in linear rows", "Leaves turn yellow and dry prematurely", "Reduced grain size and shriveled grains"],
+    "leaf_indicators": {
+      "colors": ["yellow", "orange", "rust"],
+      "shapes": ["linear", "stripe"],
+      "patterns": ["vein_parallel", "rows"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Scattered pustules on lower leaves, < 10% severity"},
+      {"level": "moderate", "description": "Pustules on multiple leaves including flag leaf, 10-40% severity"},
+      {"level": "severe", "description": "Heavy stripe coverage, premature drying, > 40% severity, yield loss 30-70%"}
+    ],
+    "favorable_conditions": {"temp_min": 10, "temp_max": 18, "humidity_min": 80, "rainfall": false},
+    "treatment": ["Spray Propiconazole 25% EC @ 1ml/L at first appearance", "Tebuconazole 25% WG @ 1g/L", "Triadimefon 25% WP @ 1g/L"],
+    "prevention": ["Grow resistant varieties (HD-3086, PBW-725)", "Timely sowing (avoid late sowing)", "Avoid excessive nitrogen", "Monitor fields from January onwards"],
+    "organic_treatment": ["Sulphur dust @ 25 kg/ha", "Neem oil spray 3%", "Remove volunteer wheat plants"],
+    "image_keywords": "yellow stripes, orange pustules, linear rows, vein parallel",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Wheat Loose Smut",
+    "name_hindi": "Gehun ka Khula Kand",
+    "crop_name": "Wheat",
+    "pathogen_type": "fungal",
+    "symptoms": ["Entire ear converted to black powdery mass", "Spores released by wind leaving bare rachis", "Infected ears emerge earlier than healthy ones", "No grain formation in affected ears"],
+    "leaf_indicators": {
+      "colors": ["black"],
+      "shapes": ["powdery mass"],
+      "patterns": ["ear_replacement"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "< 5% ears affected"},
+      {"level": "moderate", "description": "5-15% ears affected"},
+      {"level": "severe", "description": "> 15% ears affected, significant yield loss"}
+    ],
+    "favorable_conditions": {"temp_min": 16, "temp_max": 22, "humidity_min": 70, "rainfall": false},
+    "treatment": ["Seed treatment with Carboxin 75% WP @ 2g/kg seed", "Vitavax (Carboxin + Thiram) @ 2.5g/kg seed", "Tebuconazole 2DS @ 1.5g/kg"],
+    "prevention": ["Use certified disease-free seed", "Hot water seed treatment (52°C for 10 min)", "Rogue out infected plants before spore release"],
+    "organic_treatment": ["Solar seed treatment (soak 4h, sun-dry 4h, repeat 3 days)", "Hot water treatment at 52°C for 10 minutes", "Trichoderma viride seed treatment @ 4g/kg"],
+    "image_keywords": "black powdery ear, bare rachis, sooty mass",
+    "affected_plant_part": "ear"
+  },
+  {
+    "name": "Karnal Bunt",
+    "name_hindi": "Gehun ka Karnal Bunt",
+    "crop_name": "Wheat",
+    "pathogen_type": "fungal",
+    "symptoms": ["Partially bunted grains with black powdery mass", "Fishy (trimethylamine) smell from infected grains", "Pericarp replaced by black teliospores", "Only part of the grain is affected, not the whole ear"],
+    "leaf_indicators": {
+      "colors": ["black"],
+      "shapes": ["partial grain"],
+      "patterns": ["grain_replacement"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "< 3% grains affected"},
+      {"level": "moderate", "description": "3-10% grains affected, noticeable fishy smell"},
+      {"level": "severe", "description": "> 10% grains affected, grain rejected at mandi"}
+    ],
+    "favorable_conditions": {"temp_min": 18, "temp_max": 24, "humidity_min": 70, "rainfall": true},
+    "treatment": ["Spray Propiconazole 25% EC @ 1ml/L at boot leaf stage", "Seed treatment with Thiram @ 2.5g/kg"],
+    "prevention": ["Avoid late sowing", "Grow resistant varieties", "Deep ploughing after harvest", "Use disease-free seed from certified sources"],
+    "organic_treatment": ["Neem cake application", "Trichoderma viride soil treatment", "Crop rotation with non-host crops"],
+    "image_keywords": "partially black grain, fishy smell, black powder in grain",
+    "affected_plant_part": "grain"
+  },
+  {
+    "name": "Cotton Bacterial Blight",
+    "name_hindi": "Kapas ka Jivanu Angmari",
+    "crop_name": "Cotton",
+    "pathogen_type": "bacterial",
+    "symptoms": ["Angular water-soaked spots on leaves", "Spots turn brown to black with age", "Black arm symptom on stems and branches", "Boll rot with sunken black lesions"],
+    "leaf_indicators": {
+      "colors": ["brown", "black", "water-soaked"],
+      "shapes": ["angular"],
+      "patterns": ["vein_limited"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few angular spots on lower leaves, < 10% affected"},
+      {"level": "moderate", "description": "Spots on many leaves, black arm starting, 10-30% affected"},
+      {"level": "severe", "description": "Extensive black arm, boll rot, defoliation, > 30% affected"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 35, "humidity_min": 80, "rainfall": true},
+    "treatment": ["Spray Streptocycline @ 100 ppm + Copper oxychloride @ 2.5g/L", "Copper hydroxide 77% WP @ 2g/L", "Pause irrigation if bacterial blight is spreading"],
+    "prevention": ["Use disease-free acid-delinted seed", "Seed treatment with Carboxin + Thiram", "Avoid overhead irrigation", "Balanced fertilization"],
+    "organic_treatment": ["Pseudomonas fluorescens seed treatment and spray", "Neem oil 5% spray", "Remove and destroy infected plant parts"],
+    "image_keywords": "angular water-soaked spots, black arm, vein-limited lesions",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Cotton Leaf Curl Virus",
+    "name_hindi": "Kapas ka Patti Mod Rog",
+    "crop_name": "Cotton",
+    "pathogen_type": "viral",
+    "symptoms": ["Upward or downward curling of leaves", "Thickening and darkening of leaf veins", "Enations (cup-shaped outgrowths) on undersurface of leaves", "Stunted plant growth and reduced boll formation"],
+    "leaf_indicators": {
+      "colors": ["dark green", "yellow-green"],
+      "shapes": ["curled", "cupped"],
+      "patterns": ["vein_thickening", "enations"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Slight leaf curling on a few plants, < 10% plants affected"},
+      {"level": "moderate", "description": "Pronounced curling with vein thickening, 10-40% plants"},
+      {"level": "severe", "description": "Severe stunting, enations, minimal boll set, > 40% plants affected"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 35, "humidity_min": 60, "rainfall": false},
+    "treatment": ["Control whitefly vector: Imidacloprid 17.8% SL @ 0.3ml/L", "Diafenthiuron 50% WP @ 1g/L for whitefly", "No cure for virus - remove severely infected plants"],
+    "prevention": ["Grow resistant Bt cotton varieties", "Seed treatment with Imidacloprid 70% WS @ 5g/kg", "Avoid late sowing (sow before May end)", "Install yellow sticky traps for whitefly monitoring"],
+    "organic_treatment": ["Neem oil 5ml/L spray for whitefly control", "Yellow sticky traps @ 12/acre", "Conserve natural enemies (ladybird beetles, lacewings)"],
+    "image_keywords": "leaf curling, vein thickening, enations, stunted growth",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Cotton Wilt (Fusarium)",
+    "name_hindi": "Kapas ka Uktha Rog",
+    "crop_name": "Cotton",
+    "pathogen_type": "fungal",
+    "symptoms": ["Yellowing and wilting of leaves starting from lower portion", "Vascular browning visible when stem is cut", "One-sided wilting of plant", "Plants dry up and die prematurely"],
+    "leaf_indicators": {
+      "colors": ["yellow", "brown"],
+      "shapes": ["wilted"],
+      "patterns": ["one_sided", "bottom_to_top"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Lower leaves showing yellowing, < 10% plants"},
+      {"level": "moderate", "description": "Wilting visible, vascular browning, 10-25% plants"},
+      {"level": "severe", "description": "Widespread plant death, > 25% plants affected"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 30, "humidity_min": 70, "rainfall": true},
+    "treatment": ["No chemical cure once established", "Soil drenching with Carbendazim 50% WP @ 1g/L", "Apply Trichoderma viride @ 2.5 kg/ha to soil"],
+    "prevention": ["Use wilt-resistant varieties", "Crop rotation with non-host crops", "Deep summer ploughing", "Avoid waterlogging"],
+    "organic_treatment": ["Trichoderma viride soil application @ 2.5 kg/ha", "Neem cake @ 250 kg/ha", "Bio-enriched FYM application"],
+    "image_keywords": "wilting, yellowing lower leaves, vascular browning, one-sided wilt",
+    "affected_plant_part": "whole_plant"
+  },
+  {
+    "name": "Tomato Early Blight",
+    "name_hindi": "Tamatar ka Ageti Angmari",
+    "crop_name": "Tomato",
+    "pathogen_type": "fungal",
+    "symptoms": ["Concentric ring-patterned brown spots on older leaves", "Target-board appearance of lesions", "Yellowing around spots", "Premature defoliation from bottom upwards", "Dark sunken lesions on fruit stem end"],
+    "leaf_indicators": {
+      "colors": ["brown", "dark brown", "yellow"],
+      "shapes": ["circular", "target-board"],
+      "patterns": ["concentric_rings", "lower_leaves_first"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few target-like spots on lower leaves, < 10% defoliation"},
+      {"level": "moderate", "description": "Spots on middle canopy, 10-30% defoliation"},
+      {"level": "severe", "description": "Widespread defoliation, fruit lesions, > 30% loss"}
+    ],
+    "favorable_conditions": {"temp_min": 24, "temp_max": 29, "humidity_min": 80, "rainfall": true},
+    "treatment": ["Spray Mancozeb 75% WP @ 2.5g/L at 10-day intervals", "Chlorothalonil 75% WP @ 2g/L", "Azoxystrobin 23% SC @ 1ml/L"],
+    "prevention": ["Maintain proper plant spacing for air circulation", "Stake plants to reduce soil contact", "Remove and destroy lower infected leaves", "Crop rotation with non-solanaceous crops"],
+    "organic_treatment": ["Copper-based Bordeaux mixture 1% spray", "Trichoderma viride foliar spray", "Neem oil 2% spray"],
+    "image_keywords": "concentric rings, target-board spots, brown lesions, lower leaf yellowing",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Tomato Late Blight",
+    "name_hindi": "Tamatar ka Picheti Angmari",
+    "crop_name": "Tomato",
+    "pathogen_type": "fungal",
+    "symptoms": ["Large water-soaked irregular patches on leaves", "White cottony growth on leaf undersurface", "Rapid browning and collapse of foliage", "Brown firm rot on green fruits"],
+    "leaf_indicators": {
+      "colors": ["dark green water-soaked", "brown", "white"],
+      "shapes": ["irregular", "large patches"],
+      "patterns": ["water_soaked", "cottony_undersurface"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Small water-soaked patches on a few plants"},
+      {"level": "moderate", "description": "Patches spreading rapidly, white mold visible, 10-40% foliage affected"},
+      {"level": "severe", "description": "Entire plants collapsing, fruit rot, > 40%, can destroy crop in days"}
+    ],
+    "favorable_conditions": {"temp_min": 15, "temp_max": 22, "humidity_min": 90, "rainfall": true},
+    "treatment": ["Spray Metalaxyl + Mancozeb (Ridomil MZ 68% WP) @ 2.5g/L immediately", "Cymoxanil + Mancozeb @ 3g/L", "Dimethomorph 50% WP @ 1g/L"],
+    "prevention": ["Avoid overhead irrigation", "Good drainage", "Do not plant near potatoes", "Destroy volunteer plants"],
+    "organic_treatment": ["Bordeaux mixture 1% spray preventively", "Copper hydroxide spray", "Improve air circulation by proper spacing"],
+    "image_keywords": "water-soaked patches, white mold, rapid browning, fruit rot",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Tomato Leaf Curl Virus",
+    "name_hindi": "Tamatar ka Patti Mod Rog",
+    "crop_name": "Tomato",
+    "pathogen_type": "viral",
+    "symptoms": ["Severe upward curling of leaves", "Leaves become thick and leathery", "Stunted plant growth", "Yellow margins on curled leaves", "Poor or no fruit set"],
+    "leaf_indicators": {
+      "colors": ["yellow-green", "dark green"],
+      "shapes": ["curled upward", "cupped"],
+      "patterns": ["margin_yellowing", "vein_clearing"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Slight curling on new growth, few plants affected"},
+      {"level": "moderate", "description": "Pronounced curling, stunting, 10-40% plants"},
+      {"level": "severe", "description": "Severe stunting, no fruiting, > 40% plants affected"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 35, "humidity_min": 50, "rainfall": false},
+    "treatment": ["Control whitefly vector: Imidacloprid 17.8 SL @ 0.3ml/L", "Thiamethoxam 25% WG @ 0.3g/L for whitefly", "Remove and destroy infected plants"],
+    "prevention": ["Use ToLCV resistant varieties (Arka Rakshak, Arka Samrat)", "Grow nursery under nylon net (40 mesh)", "Install yellow sticky traps", "Avoid planting near cotton fields"],
+    "organic_treatment": ["Neem oil 5ml/L for whitefly control", "Yellow sticky traps @ 12/acre", "Reflective silver mulch to repel whiteflies"],
+    "image_keywords": "upward curling, thick leathery leaves, stunted, yellow margins",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Potato Late Blight",
+    "name_hindi": "Aloo ka Picheti Angmari",
+    "crop_name": "Potato",
+    "pathogen_type": "fungal",
+    "symptoms": ["Water-soaked dark brown patches on leaf tips and margins", "White cottony fungal growth on undersurface in humid conditions", "Rapid browning and death of entire foliage", "Brown to purple discoloration of tubers", "Tuber rot with granular appearance"],
+    "leaf_indicators": {
+      "colors": ["dark brown", "black", "white"],
+      "shapes": ["irregular patches"],
+      "patterns": ["tip_and_margin", "water_soaked"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Small patches on leaf tips, < 10% foliage affected"},
+      {"level": "moderate", "description": "Rapid spread, white mold visible, 10-40% foliage"},
+      {"level": "severe", "description": "Entire field browning, tuber infection, > 40%, crop destruction possible"}
+    ],
+    "favorable_conditions": {"temp_min": 10, "temp_max": 20, "humidity_min": 90, "rainfall": true},
+    "treatment": ["Spray Metalaxyl + Mancozeb (Ridomil MZ) @ 2.5g/L", "Cymoxanil + Mancozeb @ 3g/L", "Fenamidone + Mancozeb @ 3g/L"],
+    "prevention": ["Use certified disease-free seed tubers", "Prophylactic spray of Mancozeb before disease onset", "Good drainage and ridging", "Haulm cutting 10 days before harvest"],
+    "organic_treatment": ["Bordeaux mixture 1% prophylactic spray", "Copper oxychloride spray", "Avoid overhead irrigation"],
+    "image_keywords": "dark patches on tips, white mold underneath, rapid browning, tuber rot",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Potato Early Blight",
+    "name_hindi": "Aloo ka Ageti Angmari",
+    "crop_name": "Potato",
+    "pathogen_type": "fungal",
+    "symptoms": ["Brown circular spots with concentric rings (target board)", "Spots appear first on older lower leaves", "Yellow halo around spots", "Premature defoliation"],
+    "leaf_indicators": {
+      "colors": ["brown", "dark brown", "yellow"],
+      "shapes": ["circular"],
+      "patterns": ["concentric_rings", "target_board"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few target-board spots on lower leaves"},
+      {"level": "moderate", "description": "Spots on multiple leaves, some defoliation"},
+      {"level": "severe", "description": "Heavy defoliation, reduced tuber size"}
+    ],
+    "favorable_conditions": {"temp_min": 24, "temp_max": 29, "humidity_min": 80, "rainfall": false},
+    "treatment": ["Mancozeb 75% WP @ 2.5g/L spray at 10-day intervals", "Chlorothalonil 75% WP @ 2g/L", "Azoxystrobin 23% SC @ 1ml/L"],
+    "prevention": ["Remove lower infected leaves", "Adequate potassium fertilization", "Avoid water stress", "Crop rotation"],
+    "organic_treatment": ["Bordeaux mixture 1% spray", "Trichoderma viride foliar application", "Neem oil spray"],
+    "image_keywords": "target-board spots, concentric rings, lower leaf, yellow halo",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Potato Black Scurf",
+    "name_hindi": "Aloo ka Kala Chittha",
+    "crop_name": "Potato",
+    "pathogen_type": "fungal",
+    "symptoms": ["Black sclerotia on tuber surface that cannot be washed off", "Stem canker - brown sunken lesions at soil line", "Aerial tubers and rosette tops", "Russet crack on tubers"],
+    "leaf_indicators": {
+      "colors": ["brown", "black"],
+      "shapes": ["sunken"],
+      "patterns": ["soil_line"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Light sclerotia on tubers, cosmetic issue only"},
+      {"level": "moderate", "description": "Heavy sclerotia, some stem canker, reduced tuber quality"},
+      {"level": "severe", "description": "Severe stem canker, aerial tubers, significant yield loss"}
+    ],
+    "favorable_conditions": {"temp_min": 15, "temp_max": 20, "humidity_min": 75, "rainfall": true},
+    "treatment": ["Seed tuber treatment with Pencycuron 22.9% SC @ 1.3ml/kg", "Boric acid 3% dip for 30 minutes before planting", "Mancozeb + Carbendazim seed treatment"],
+    "prevention": ["Use clean seed tubers", "Avoid planting in cold wet soil", "Crop rotation for 2-3 years", "Harvest promptly when tubers mature"],
+    "organic_treatment": ["Trichoderma viride seed tuber treatment", "Bio-enriched compost application", "Green manuring before planting"],
+    "image_keywords": "black sclerotia on tuber, stem canker, brown lesion at soil line",
+    "affected_plant_part": "tuber"
+  },
+  {
+    "name": "Maize Turcicum Leaf Blight",
+    "name_hindi": "Makka ka Turcicum Patti Jhulsa",
+    "crop_name": "Maize",
+    "pathogen_type": "fungal",
+    "symptoms": ["Long elliptical gray-green lesions on leaves", "Lesions start on lower leaves and progress upward", "Lesions coalesce causing large dead areas", "Premature drying of leaves"],
+    "leaf_indicators": {
+      "colors": ["gray-green", "tan", "brown"],
+      "shapes": ["elliptical", "cigar-shaped"],
+      "patterns": ["long_lesions", "lower_to_upper"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few lesions on lower leaves, < 10% leaf area"},
+      {"level": "moderate", "description": "Lesions on mid-canopy, 10-30% leaf area blighted"},
+      {"level": "severe", "description": "Extensive blighting, premature drying, > 30% area, ear rot risk"}
+    ],
+    "favorable_conditions": {"temp_min": 18, "temp_max": 27, "humidity_min": 80, "rainfall": true},
+    "treatment": ["Spray Zineb 75% WP @ 2g/L", "Mancozeb 75% WP @ 2.5g/L", "Propiconazole 25% EC @ 1ml/L"],
+    "prevention": ["Use resistant hybrids", "Remove crop residues", "Avoid mono-cropping of maize", "Balanced fertilization"],
+    "organic_treatment": ["Trichoderma harzianum foliar spray", "Neem oil 2% spray", "Destroy crop debris after harvest"],
+    "image_keywords": "long elliptical gray-green lesions, cigar-shaped, lower leaf",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Maize Downy Mildew",
+    "name_hindi": "Makka ka Mridu Asita",
+    "crop_name": "Maize",
+    "pathogen_type": "fungal",
+    "symptoms": ["Chlorotic stripes running parallel to midrib", "White downy fungal growth on undersurface", "Leaves become narrow and erect (crazy top)", "Tassels replaced by leafy structures in severe cases"],
+    "leaf_indicators": {
+      "colors": ["yellow-green", "white"],
+      "shapes": ["stripes"],
+      "patterns": ["parallel_to_midrib", "downy_undersurface"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few plants showing chlorotic stripes"},
+      {"level": "moderate", "description": "Multiple plants affected, downy growth visible"},
+      {"level": "severe", "description": "Crazy top symptoms, no ears formed, > 20% plants affected"}
+    ],
+    "favorable_conditions": {"temp_min": 20, "temp_max": 28, "humidity_min": 85, "rainfall": true},
+    "treatment": ["Spray Metalaxyl + Mancozeb @ 2.5g/L", "Seed treatment with Metalaxyl 35 SD @ 2g/kg"],
+    "prevention": ["Use resistant varieties", "Seed treatment mandatory", "Avoid waterlogging", "Rogue infected plants early"],
+    "organic_treatment": ["Remove and destroy infected plants", "Improve field drainage", "Trichoderma soil application"],
+    "image_keywords": "chlorotic stripes, white downy growth, crazy top, leafy tassels",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Maize Stalk Rot",
+    "name_hindi": "Makka ka Tana Sadan",
+    "crop_name": "Maize",
+    "pathogen_type": "fungal",
+    "symptoms": ["Premature drying of upper leaves while lower leaves remain green", "Stalk becomes soft and spongy at lower internodes", "Brown to black discoloration of internal stalk tissue", "Plants lodge easily"],
+    "leaf_indicators": {
+      "colors": ["brown", "dry"],
+      "shapes": ["premature_drying"],
+      "patterns": ["top_drying"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few plants showing early drying"},
+      {"level": "moderate", "description": "Stalk rot visible, some lodging"},
+      {"level": "severe", "description": "Widespread lodging, ear rot, > 20% plants affected"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 35, "humidity_min": 75, "rainfall": true},
+    "treatment": ["No effective chemical cure once established", "Apply Carbendazim 50% WP to soil as drench"],
+    "prevention": ["Avoid waterlogging", "Balanced fertilization (avoid excess N, ensure adequate K)", "Do not injure stalks during intercultivation", "Harvest early to avoid lodging losses"],
+    "organic_treatment": ["Trichoderma harzianum soil application", "Neem cake @ 200 kg/ha", "Proper drainage management"],
+    "image_keywords": "premature top drying, soft spongy stalk, lodging, internal brown tissue",
+    "affected_plant_part": "stem"
+  },
+  {
+    "name": "Sugarcane Red Rot",
+    "name_hindi": "Ganna ka Lal Sadan",
+    "crop_name": "Sugarcane",
+    "pathogen_type": "fungal",
+    "symptoms": ["Drying of third and fourth leaves from top", "Red discoloration of internal rind tissue", "White patches interspersed within red areas (typical red rot symptom)", "Alcoholic smell from split cane", "Shriveling and hollowing of cane"],
+    "leaf_indicators": {
+      "colors": ["yellow", "dry brown"],
+      "shapes": ["drying"],
+      "patterns": ["third_fourth_leaf"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Slight reddening in few canes, < 5% affected"},
+      {"level": "moderate", "description": "Red rot visible in 5-20% canes, some drying"},
+      {"level": "severe", "description": "Widespread drying, hollow canes, > 20%, entire clumps die"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 32, "humidity_min": 80, "rainfall": true},
+    "treatment": ["No effective chemical control once infected", "Remove and destroy infected stools", "Sett treatment with Carbendazim 50% WP (0.1% solution for 15 min)"],
+    "prevention": ["Use disease-free setts from certified nurseries", "Sett treatment with Carbendazim + hot water (50°C, 2hr)", "Grow resistant varieties (Co 0238, Co 86032)", "Avoid ratooning in infected fields"],
+    "organic_treatment": ["Trichoderma viride sett treatment", "Bio-enriched compost application", "Hot water treatment of setts at 50°C for 2 hours"],
+    "image_keywords": "red internal tissue, white patches in red, alcoholic smell, drying leaves",
+    "affected_plant_part": "stem"
+  },
+  {
+    "name": "Sugarcane Smut",
+    "name_hindi": "Ganna ka Kand",
+    "crop_name": "Sugarcane",
+    "pathogen_type": "fungal",
+    "symptoms": ["Black whip-like structure emerging from growing point", "Whip covered with black sooty spores", "Grass-like thin shoots (whip smut)", "Excessive tillering with thin canes"],
+    "leaf_indicators": {
+      "colors": ["black"],
+      "shapes": ["whip-like"],
+      "patterns": ["growing_point"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "< 5% stools showing whip"},
+      {"level": "moderate", "description": "5-15% stools affected"},
+      {"level": "severe", "description": "> 15% stools affected, grassy shoots widespread"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 35, "humidity_min": 60, "rainfall": false},
+    "treatment": ["Remove and destroy smutted whips before spore dispersal", "Sett treatment with Carbendazim 0.1% for 15 min", "Triadimefon 25% WP foliar spray"],
+    "prevention": ["Use resistant varieties", "Use disease-free setts", "Hot water sett treatment (52°C, 30 min)", "Rogue out smutted clumps regularly"],
+    "organic_treatment": ["Hot water treatment of setts", "Trichoderma viride sett treatment", "Roguing and destruction of infected clumps"],
+    "image_keywords": "black whip, sooty spores, thin grassy shoots, growing point whip",
+    "affected_plant_part": "growing_point"
+  },
+  {
+    "name": "Sugarcane Grassy Shoot",
+    "name_hindi": "Ganna ka Ghaspaat Rog",
+    "crop_name": "Sugarcane",
+    "pathogen_type": "phytoplasma",
+    "symptoms": ["Profuse tillering producing thin grass-like shoots", "Leaves become chlorotic and narrow", "No cane formation, only vegetative growth", "White or pale yellow leaf color"],
+    "leaf_indicators": {
+      "colors": ["pale yellow", "chlorotic", "white"],
+      "shapes": ["narrow"],
+      "patterns": ["profuse_tillering"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "< 5% stools showing grassy shoots"},
+      {"level": "moderate", "description": "5-15% stools affected"},
+      {"level": "severe", "description": "> 15% stools affected, no cane formation"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 35, "humidity_min": 70, "rainfall": true},
+    "treatment": ["No chemical cure available", "Remove and destroy infected clumps", "Avoid ratooning in affected fields"],
+    "prevention": ["Use disease-free setts from certified nurseries", "Hot water treatment of setts (50°C, 2 hours)", "Rogue infected stools monthly", "Grow resistant varieties"],
+    "organic_treatment": ["Hot water sett treatment", "Complete destruction of infected clumps", "Use tissue culture raised disease-free planting material"],
+    "image_keywords": "grassy thin shoots, profuse tillering, chlorotic narrow leaves, no cane",
+    "affected_plant_part": "whole_plant"
+  },
+  {
+    "name": "Soybean Rust",
+    "name_hindi": "Soyabean ki Geru",
+    "crop_name": "Soybean",
+    "pathogen_type": "fungal",
+    "symptoms": ["Small tan to dark brown or reddish-brown lesions on leaves", "Pustules (uredinia) on undersurface of leaves", "Premature defoliation", "Rust-colored spore masses"],
+    "leaf_indicators": {
+      "colors": ["tan", "reddish-brown", "rust"],
+      "shapes": ["small circular"],
+      "patterns": ["pustules_undersurface"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Scattered small lesions on lower canopy"},
+      {"level": "moderate", "description": "Pustules on multiple leaves, some defoliation"},
+      {"level": "severe", "description": "Heavy defoliation, > 30% leaves lost, significant pod loss"}
+    ],
+    "favorable_conditions": {"temp_min": 18, "temp_max": 28, "humidity_min": 80, "rainfall": true},
+    "treatment": ["Spray Hexaconazole 5% EC @ 2ml/L", "Propiconazole 25% EC @ 1ml/L", "Tebuconazole 25.9% EC @ 1ml/L"],
+    "prevention": ["Early sowing to escape peak disease period", "Use tolerant varieties (JS 335, JS 9560)", "Scout fields from flowering stage"],
+    "organic_treatment": ["Neem oil 5ml/L spray", "Trichoderma viride foliar spray", "Proper spacing for air circulation"],
+    "image_keywords": "tan-brown lesions, rust pustules, undersurface, premature defoliation",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Soybean Yellow Mosaic Virus",
+    "name_hindi": "Soyabean ka Peela Mosaic Rog",
+    "crop_name": "Soybean",
+    "pathogen_type": "viral",
+    "symptoms": ["Bright yellow mosaic pattern on leaves", "Puckering and crinkling of leaves", "Reduced leaf size", "Stunted plant growth and poor pod setting"],
+    "leaf_indicators": {
+      "colors": ["bright yellow", "green"],
+      "shapes": ["puckered", "crinkled"],
+      "patterns": ["mosaic", "irregular_yellow_patches"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Faint mosaic on a few plants"},
+      {"level": "moderate", "description": "Pronounced mosaic, stunting, 10-30% plants"},
+      {"level": "severe", "description": "Severe mosaic and stunting, poor podding, > 30% plants"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 35, "humidity_min": 60, "rainfall": false},
+    "treatment": ["Control whitefly vector with Thiamethoxam 25% WG @ 0.3g/L", "Remove infected plants", "No direct cure for virus"],
+    "prevention": ["Seed treatment with Thiamethoxam 30% FS @ 10ml/kg", "Use resistant/tolerant varieties", "Control weeds that harbor virus", "Avoid late sowing"],
+    "organic_treatment": ["Neem oil spray for whitefly control", "Yellow sticky traps", "Destroy infected plants and weeds"],
+    "image_keywords": "bright yellow mosaic, puckered leaves, stunted growth",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Soybean Charcoal Rot",
+    "name_hindi": "Soyabean ka Charcoal Sadan",
+    "crop_name": "Soybean",
+    "pathogen_type": "fungal",
+    "symptoms": ["Premature maturity and drying", "Silver-gray discoloration of stem epidermis", "Black microsclerotia visible under stem epidermis", "Shredding of stem tissue at base"],
+    "leaf_indicators": {
+      "colors": ["silver-gray", "brown", "dry"],
+      "shapes": ["premature_drying"],
+      "patterns": ["base_upward"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few plants showing premature maturity"},
+      {"level": "moderate", "description": "Multiple plants dying, microsclerotia visible"},
+      {"level": "severe", "description": "> 20% plants dying prematurely, significant yield loss"}
+    ],
+    "favorable_conditions": {"temp_min": 30, "temp_max": 40, "humidity_min": 40, "rainfall": false},
+    "treatment": ["Seed treatment with Carbendazim 50% WP @ 2g/kg", "Soil drenching with Carbendazim in severe cases"],
+    "prevention": ["Avoid moisture stress during pod filling", "Maintain adequate plant population", "Crop rotation with cereals", "Deep summer ploughing"],
+    "organic_treatment": ["Trichoderma viride seed treatment @ 4g/kg", "Bio-enriched FYM application", "Mulching to conserve soil moisture"],
+    "image_keywords": "premature drying, silver-gray stem, black microsclerotia, shredded stem",
+    "affected_plant_part": "stem"
+  },
+  {
+    "name": "Groundnut Tikka Disease (Early Leaf Spot)",
+    "name_hindi": "Moongphali ka Tikka Rog",
+    "crop_name": "Groundnut",
+    "pathogen_type": "fungal",
+    "symptoms": ["Circular brown spots with yellow halo on upper leaf surface", "Dark brown to black spots on lower surface", "Premature defoliation", "Reduced pod filling"],
+    "leaf_indicators": {
+      "colors": ["brown", "dark brown", "yellow halo"],
+      "shapes": ["circular"],
+      "patterns": ["spots_both_surfaces"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few spots on lower leaves, < 10% defoliation"},
+      {"level": "moderate", "description": "Spots on multiple leaves, 10-30% defoliation"},
+      {"level": "severe", "description": "Heavy defoliation > 30%, reduced pod yield"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 30, "humidity_min": 80, "rainfall": true},
+    "treatment": ["Spray Chlorothalonil 75% WP @ 2g/L at 35, 50, 65 DAS", "Mancozeb 75% WP @ 2.5g/L", "Hexaconazole 5% EC @ 2ml/L"],
+    "prevention": ["Use resistant varieties (GPBD-4, ICGV 00350)", "Early sowing", "Proper spacing", "Destroy crop residues"],
+    "organic_treatment": ["Neem oil 3% spray", "Trichoderma viride foliar spray", "Bordeaux mixture 1% spray"],
+    "image_keywords": "circular brown spots, yellow halo, premature defoliation",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Groundnut Stem Rot (Sclerotium)",
+    "name_hindi": "Moongphali ka Tana Sadan",
+    "crop_name": "Groundnut",
+    "pathogen_type": "fungal",
+    "symptoms": ["Wilting and drying of branches", "White mycelial growth at stem base and soil surface", "Small round brown sclerotia at collar region", "Plant pulls out easily from soil"],
+    "leaf_indicators": {
+      "colors": ["wilted green", "dry brown"],
+      "shapes": ["wilted"],
+      "patterns": ["base_infection"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few plants wilting, < 5%"},
+      {"level": "moderate", "description": "Patches of dead plants, 5-20%"},
+      {"level": "severe", "description": "Large patches of dead plants, > 20%"}
+    ],
+    "favorable_conditions": {"temp_min": 28, "temp_max": 35, "humidity_min": 85, "rainfall": true},
+    "treatment": ["Soil drenching with Carbendazim 50% WP @ 1g/L around affected plants", "Seed treatment with Carboxin + Thiram @ 3g/kg"],
+    "prevention": ["Deep summer ploughing", "Apply neem cake @ 250 kg/ha at sowing", "Avoid excess moisture at collar region", "Treat seed with Trichoderma before sowing"],
+    "organic_treatment": ["Trichoderma viride soil application @ 2.5 kg/ha with FYM", "Neem cake application @ 250 kg/ha", "Crop rotation with cereals for 2-3 years"],
+    "image_keywords": "white mycelium at base, brown sclerotia, wilting branches, easy uprooting",
+    "affected_plant_part": "stem"
+  },
+  {
+    "name": "Groundnut Bud Necrosis Virus",
+    "name_hindi": "Moongphali ka Kali Necrosis Rog",
+    "crop_name": "Groundnut",
+    "pathogen_type": "viral",
+    "symptoms": ["Necrosis (death) of terminal bud", "Ring spots on leaves", "Axillary shoot proliferation giving bushy appearance", "Stunted growth and no pegging"],
+    "leaf_indicators": {
+      "colors": ["necrotic brown", "chlorotic yellow"],
+      "shapes": ["ring spots"],
+      "patterns": ["terminal_bud_death", "bushy"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few plants showing bud necrosis"},
+      {"level": "moderate", "description": "10-25% plants affected, bushy growth visible"},
+      {"level": "severe", "description": "> 25% plants affected, no pod formation"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 35, "humidity_min": 50, "rainfall": false},
+    "treatment": ["Control thrips vector: Imidacloprid 17.8% SL @ 0.3ml/L", "Fipronil 5% SC @ 2ml/L for thrips", "Remove and destroy infected plants"],
+    "prevention": ["Early sowing (within 15 days of monsoon onset)", "Seed treatment with Imidacloprid 70% WS @ 2g/kg", "Intercropping with pearl millet as barrier", "Use tolerant varieties (ICGV 86699)"],
+    "organic_treatment": ["Neem oil 5ml/L spray for thrips", "Blue sticky traps for monitoring", "Early sowing is the most effective organic approach"],
+    "image_keywords": "dead terminal bud, ring spots, bushy growth, stunted plant",
+    "affected_plant_part": "bud"
+  },
+  {
+    "name": "Mustard White Rust",
+    "name_hindi": "Sarson ka Safed Geru",
+    "crop_name": "Mustard",
+    "pathogen_type": "fungal",
+    "symptoms": ["White raised blister-like pustules on undersurface of leaves", "Corresponding yellow spots on upper surface", "Swelling and distortion of floral parts (staghead)", "Hypertrophy of inflorescence"],
+    "leaf_indicators": {
+      "colors": ["white", "yellow"],
+      "shapes": ["blister-like", "swollen"],
+      "patterns": ["undersurface_pustules", "staghead"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few pustules on lower leaves, no staghead"},
+      {"level": "moderate", "description": "Widespread pustules, early staghead formation"},
+      {"level": "severe", "description": "Heavy staghead, no seed formation on affected branches"}
+    ],
+    "favorable_conditions": {"temp_min": 10, "temp_max": 20, "humidity_min": 75, "rainfall": true},
+    "treatment": ["Spray Metalaxyl + Mancozeb (Ridomil MZ) @ 2.5g/L", "Mancozeb 75% WP @ 2.5g/L prophylactically"],
+    "prevention": ["Timely sowing (October 15-25)", "Use resistant varieties (Pusa Bold, RH-30)", "Remove stagheads before spore release", "Avoid excessive irrigation"],
+    "organic_treatment": ["Neem oil 3% spray", "Bordeaux mixture 1% spray", "Remove and destroy stagheads"],
+    "image_keywords": "white blisters undersurface, yellow spots top, staghead, swollen flowers",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Mustard Alternaria Blight",
+    "name_hindi": "Sarson ka Alternaria Patti Jhulsa",
+    "crop_name": "Mustard",
+    "pathogen_type": "fungal",
+    "symptoms": ["Dark brown to black circular spots with concentric rings on leaves", "Spots on pods causing shriveled seeds", "Premature drying of leaves", "Dark streaks on stems"],
+    "leaf_indicators": {
+      "colors": ["dark brown", "black"],
+      "shapes": ["circular"],
+      "patterns": ["concentric_rings"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few spots on lower leaves"},
+      {"level": "moderate", "description": "Spots on leaves and pods, some defoliation"},
+      {"level": "severe", "description": "Heavy defoliation, pod infection, shriveled seeds"}
+    ],
+    "favorable_conditions": {"temp_min": 15, "temp_max": 25, "humidity_min": 80, "rainfall": true},
+    "treatment": ["Spray Mancozeb 75% WP @ 2.5g/L at 45 and 60 DAS", "Iprodione 50% WP @ 2g/L", "Azoxystrobin 23% SC @ 1ml/L"],
+    "prevention": ["Use tolerant varieties (Pusa Vijay, DRMR IJ-31)", "Timely sowing", "Treat seeds with Mancozeb @ 3g/kg", "Remove crop debris after harvest"],
+    "organic_treatment": ["Neem oil 3% spray", "Trichoderma viride foliar spray", "Proper field sanitation"],
+    "image_keywords": "dark brown spots, concentric rings, pod spots, premature drying",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Mustard Downy Mildew",
+    "name_hindi": "Sarson ka Mridu Asita",
+    "crop_name": "Mustard",
+    "pathogen_type": "fungal",
+    "symptoms": ["Grayish-white downy growth on undersurface of leaves", "Corresponding brown-purple patches on upper surface", "Stunted and distorted inflorescence", "Reduced siliqua formation"],
+    "leaf_indicators": {
+      "colors": ["gray-white", "brown-purple"],
+      "shapes": ["irregular patches"],
+      "patterns": ["downy_undersurface"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Downy growth on lower leaves only"},
+      {"level": "moderate", "description": "Downy growth widespread, some inflorescence distortion"},
+      {"level": "severe", "description": "Heavy infection, stunted growth, poor seed set"}
+    ],
+    "favorable_conditions": {"temp_min": 10, "temp_max": 18, "humidity_min": 85, "rainfall": true},
+    "treatment": ["Spray Metalaxyl + Mancozeb (Ridomil MZ) @ 2.5g/L", "Mancozeb 75% WP @ 2.5g/L"],
+    "prevention": ["Avoid overcrowding", "Good drainage", "Use disease-free seed", "Timely sowing"],
+    "organic_treatment": ["Bordeaux mixture 1% spray", "Neem oil spray", "Improve air circulation by proper spacing"],
+    "image_keywords": "downy white growth undersurface, brown-purple patches, distorted flowers",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Chana Wilt (Fusarium)",
+    "name_hindi": "Chane ka Uktha Rog",
+    "crop_name": "Chana",
+    "pathogen_type": "fungal",
+    "symptoms": ["Drooping and yellowing of leaves", "Plants wilt without leaf shedding - leaves dry on plant", "Brown to black discoloration of roots and stem base", "When stem is split, brown internal discoloration visible"],
+    "leaf_indicators": {
+      "colors": ["yellow", "dry brown"],
+      "shapes": ["drooping"],
+      "patterns": ["whole_plant_wilt"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Scattered wilting plants, < 10%"},
+      {"level": "moderate", "description": "Patches of wilted plants, 10-25%"},
+      {"level": "severe", "description": "Widespread mortality, > 25% plants dead"}
+    ],
+    "favorable_conditions": {"temp_min": 20, "temp_max": 30, "humidity_min": 60, "rainfall": false},
+    "treatment": ["Seed treatment with Carbendazim 50% WP @ 2g/kg", "Seed treatment with Carboxin + Thiram @ 2g/kg", "Soil drenching with Carbendazim in affected patches"],
+    "prevention": ["Use wilt-resistant varieties (JG-62, Avrodhi, KWR-108)", "Treat seed with Trichoderma viride @ 4g/kg", "Crop rotation with cereals", "Deep summer ploughing", "Avoid monocropping of chickpea"],
+    "organic_treatment": ["Trichoderma viride seed treatment @ 4g/kg + soil application @ 2.5 kg/ha", "Neem cake soil amendment @ 250 kg/ha", "Bio-enriched FYM @ 5 tonnes/ha"],
+    "image_keywords": "wilted plant with dry leaves attached, brown roots, internal discoloration",
+    "affected_plant_part": "whole_plant"
+  },
+  {
+    "name": "Chana Ascochyta Blight",
+    "name_hindi": "Chane ka Ascochyta Angmari",
+    "crop_name": "Chana",
+    "pathogen_type": "fungal",
+    "symptoms": ["Circular to oval tan-brown lesions with dark margins on leaves", "Stem girdling with lesions at branch bases", "Dark brown spots on pods", "Seeds become discolored and shriveled"],
+    "leaf_indicators": {
+      "colors": ["tan-brown", "dark brown margin"],
+      "shapes": ["circular", "oval"],
+      "patterns": ["dark_bordered_spots"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few leaf spots, < 10% leaves affected"},
+      {"level": "moderate", "description": "Multiple spots, some stem girdling, 10-30%"},
+      {"level": "severe", "description": "Widespread blight, stem breakage, pod infection, > 30%"}
+    ],
+    "favorable_conditions": {"temp_min": 10, "temp_max": 20, "humidity_min": 80, "rainfall": true},
+    "treatment": ["Spray Mancozeb 75% WP @ 2.5g/L at 10-day intervals", "Chlorothalonil 75% WP @ 2g/L", "Carbendazim + Mancozeb @ 2g/L"],
+    "prevention": ["Use resistant varieties (GL 769, PBG-5)", "Use certified disease-free seed", "Avoid dense sowing", "Intercropping with wheat/barley as barrier"],
+    "organic_treatment": ["Bordeaux mixture spray", "Trichoderma viride foliar spray", "Proper field hygiene"],
+    "image_keywords": "tan spots dark margin, stem girdling, pod spots",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Chana Botrytis Gray Mold",
+    "name_hindi": "Chane ka Dhumil Phaphoond",
+    "crop_name": "Chana",
+    "pathogen_type": "fungal",
+    "symptoms": ["Gray fuzzy mold on pods, flowers and leaves", "Rotting of flowers and young pods", "Water-soaked lesions on stems", "Premature pod and flower drop"],
+    "leaf_indicators": {
+      "colors": ["gray", "brown"],
+      "shapes": ["fuzzy mold"],
+      "patterns": ["flower_pod_rot"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Slight gray mold on lower canopy flowers"},
+      {"level": "moderate", "description": "Mold on multiple plants, flower and pod dropping"},
+      {"level": "severe", "description": "Extensive mold coverage, heavy pod loss, > 30% yield loss"}
+    ],
+    "favorable_conditions": {"temp_min": 15, "temp_max": 22, "humidity_min": 85, "rainfall": true},
+    "treatment": ["Spray Carbendazim 50% WP @ 1g/L at flowering", "Iprodione 50% WP @ 2g/L", "Mancozeb 75% WP @ 2.5g/L"],
+    "prevention": ["Avoid dense planting", "Good drainage and air circulation", "Avoid excess irrigation during flowering", "Use erect varieties for better air flow"],
+    "organic_treatment": ["Trichoderma viride foliar spray", "Neem oil spray", "Wider spacing for air circulation"],
+    "image_keywords": "gray fuzzy mold, rotting flowers and pods, water-soaked stems",
+    "affected_plant_part": "flower"
+  },
+  {
+    "name": "Onion Purple Blotch",
+    "name_hindi": "Pyaaz ka Baingani Dhabba Rog",
+    "crop_name": "Onion",
+    "pathogen_type": "fungal",
+    "symptoms": ["Small water-soaked spots that enlarge into oval purple-brown lesions", "Concentric rings within lesions", "Lesions girdle leaves causing tip die-back", "Black sooty mold on dead tissue"],
+    "leaf_indicators": {
+      "colors": ["purple-brown", "dark brown"],
+      "shapes": ["oval", "elongated"],
+      "patterns": ["concentric_rings", "tip_dieback"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few small spots on outer leaves"},
+      {"level": "moderate", "description": "Multiple large lesions, tip die-back visible"},
+      {"level": "severe", "description": "Extensive leaf death, poor bulb development, > 30% loss"}
+    ],
+    "favorable_conditions": {"temp_min": 21, "temp_max": 30, "humidity_min": 80, "rainfall": true},
+    "treatment": ["Spray Mancozeb 75% WP @ 2.5g/L at 10-day intervals", "Difenconazole 25% EC @ 0.5ml/L", "Chlorothalonil 75% WP @ 2g/L"],
+    "prevention": ["Use resistant varieties (Arka Kalyan)", "Proper spacing", "Avoid overhead irrigation", "Remove crop debris"],
+    "organic_treatment": ["Neem oil 3% spray", "Trichoderma viride foliar spray", "Bordeaux mixture 1%"],
+    "image_keywords": "purple-brown oval spots, concentric rings, tip die-back",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Onion Downy Mildew",
+    "name_hindi": "Pyaaz ka Mridu Asita",
+    "crop_name": "Onion",
+    "pathogen_type": "fungal",
+    "symptoms": ["Pale green to yellow elongated patches on leaves", "Violet-gray downy growth on patches during humid mornings", "Leaf tip bending and collapse", "Bulb neck softens and rots in storage"],
+    "leaf_indicators": {
+      "colors": ["pale green", "yellow", "violet-gray"],
+      "shapes": ["elongated patches"],
+      "patterns": ["downy_growth_morning"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few leaves showing pale patches"},
+      {"level": "moderate", "description": "Multiple plants affected, downy growth visible"},
+      {"level": "severe", "description": "Widespread leaf collapse, bulb rot, > 30% loss"}
+    ],
+    "favorable_conditions": {"temp_min": 10, "temp_max": 22, "humidity_min": 85, "rainfall": true},
+    "treatment": ["Spray Metalaxyl + Mancozeb (Ridomil MZ) @ 2.5g/L", "Cymoxanil + Mancozeb @ 3g/L"],
+    "prevention": ["Good air circulation through spacing", "Avoid evening irrigation", "Grow in well-drained soils", "Use disease-free sets"],
+    "organic_treatment": ["Bordeaux mixture 1% spray", "Copper hydroxide spray", "Improve field drainage"],
+    "image_keywords": "pale patches, violet downy growth, leaf bending, bulb neck rot",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Onion Basal Rot",
+    "name_hindi": "Pyaaz ka Jad Sadan",
+    "crop_name": "Onion",
+    "pathogen_type": "fungal",
+    "symptoms": ["Yellowing and wilting of outer leaves progressing inward", "Pink-white mycelial growth at bulb base", "Soft watery rot of basal plate", "Roots turn brown and decay"],
+    "leaf_indicators": {
+      "colors": ["yellow", "wilted"],
+      "shapes": ["progressive wilting"],
+      "patterns": ["outer_to_inner"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few plants showing basal yellowing"},
+      {"level": "moderate", "description": "Multiple plants wilting, basal rot visible"},
+      {"level": "severe", "description": "Widespread wilting and bulb loss, > 20% plants dead"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 32, "humidity_min": 75, "rainfall": true},
+    "treatment": ["Soil drenching with Carbendazim 50% WP @ 1g/L", "Set treatment with Carbendazim + Mancozeb"],
+    "prevention": ["Use disease-free sets", "Avoid injured bulbs for planting", "Crop rotation for 3-4 years", "Curing bulbs properly before storage"],
+    "organic_treatment": ["Trichoderma viride soil application", "Neem cake amendment", "Avoid waterlogging"],
+    "image_keywords": "yellowing outer leaves, pink mycelium at base, soft basal rot, brown roots",
+    "affected_plant_part": "bulb"
+  },
+  {
+    "name": "Banana Panama Wilt",
+    "name_hindi": "Kele ka Panama Uktha Rog",
+    "crop_name": "Banana",
+    "pathogen_type": "fungal",
+    "symptoms": ["Yellowing of older leaves starting from margins", "Splitting of pseudostem at base", "Brown discoloration of vascular tissue in cross-section", "Leaves collapse and hang around pseudostem like a skirt"],
+    "leaf_indicators": {
+      "colors": ["yellow", "brown"],
+      "shapes": ["margin_yellowing"],
+      "patterns": ["older_leaves_first", "skirt_hanging"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Yellowing of 1-2 older leaves"},
+      {"level": "moderate", "description": "Multiple leaves yellowing, pseudostem splitting"},
+      {"level": "severe", "description": "Complete collapse, vascular browning, plant death"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 30, "humidity_min": 70, "rainfall": true},
+    "treatment": ["No effective chemical control", "Remove and destroy infected plants including rhizomes", "Treat surrounding soil with Carbendazim drench", "Leave infected area fallow for 2-3 years"],
+    "prevention": ["Use tissue culture disease-free plantlets", "Grow resistant varieties (Grand Naine, Rajapuri)", "Avoid using suckers from infected fields", "Apply Trichoderma viride to planting pit"],
+    "organic_treatment": ["Trichoderma viride + Pseudomonas fluorescens in planting pit", "Neem cake @ 1 kg per pit", "Bio-enriched compost application"],
+    "image_keywords": "leaf margin yellowing, pseudostem split, vascular browning, hanging leaves",
+    "affected_plant_part": "whole_plant"
+  },
+  {
+    "name": "Banana Sigatoka Leaf Spot",
+    "name_hindi": "Kele ka Sigatoka Patti Dhabba",
+    "crop_name": "Banana",
+    "pathogen_type": "fungal",
+    "symptoms": ["Small light yellow-green streaks on leaves", "Streaks expand into oval brown spots with gray center", "Numerous spots coalesce causing large dead areas", "Premature drying of leaves reducing bunch weight"],
+    "leaf_indicators": {
+      "colors": ["yellow-green", "brown", "gray center"],
+      "shapes": ["oval", "streaks"],
+      "patterns": ["expanding_spots"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few spots on lower leaves, < 10% area"},
+      {"level": "moderate", "description": "Spots on multiple leaves, 10-30% leaf area"},
+      {"level": "severe", "description": "Extensive leaf death, reduced bunch size, > 30% area"}
+    ],
+    "favorable_conditions": {"temp_min": 22, "temp_max": 30, "humidity_min": 80, "rainfall": true},
+    "treatment": ["Spray Propiconazole 25% EC @ 1ml/L", "Mancozeb 75% WP @ 2.5g/L at 15-day intervals", "Carbendazim 50% WP @ 1g/L"],
+    "prevention": ["Remove dry leaves and keep plantation clean", "Adequate spacing between plants", "Proper drainage", "Use resistant varieties"],
+    "organic_treatment": ["Neem oil 3% spray", "Bordeaux mixture 1% spray", "Deleafing of severely affected leaves"],
+    "image_keywords": "yellow-green streaks, oval brown spots, gray center, coalescing spots",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Banana Bunchy Top Virus",
+    "name_hindi": "Kele ka Bunchy Top Rog",
+    "crop_name": "Banana",
+    "pathogen_type": "viral",
+    "symptoms": ["Rosetting of leaves at the top giving bunchy appearance", "Dark green streaks (Morse code pattern) on petioles and midribs", "Leaves become narrow, erect and chlorotic with wavy margins", "No bunch formation in infected plants"],
+    "leaf_indicators": {
+      "colors": ["dark green streaks", "chlorotic yellow-green"],
+      "shapes": ["narrow", "erect", "wavy margins"],
+      "patterns": ["bunchy_top", "morse_code_streaks"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few plants showing bunchy top"},
+      {"level": "moderate", "description": "10-25% plants showing typical symptoms"},
+      {"level": "severe", "description": "> 25% plants affected, spreading rapidly in plantation"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 35, "humidity_min": 60, "rainfall": false},
+    "treatment": ["No cure - uproot and destroy infected plants including corm", "Inject infected pseudostem with herbicide (Glyphosate) before uprooting", "Control banana aphid vector with Imidacloprid"],
+    "prevention": ["Use virus-indexed tissue culture plants only", "Regular survey and roguing of infected plants", "Control banana aphids with systemic insecticides", "Maintain quarantine measures"],
+    "organic_treatment": ["Eradication of infected plants is the only option", "Neem oil for aphid vector control", "Use certified virus-free planting material"],
+    "image_keywords": "bunchy rosette top, morse code streaks on petiole, narrow erect leaves",
+    "affected_plant_part": "whole_plant"
+  },
+  {
+    "name": "Mango Anthracnose",
+    "name_hindi": "Aam ka Anthracnose",
+    "crop_name": "Mango",
+    "pathogen_type": "fungal",
+    "symptoms": ["Dark brown to black irregular spots on leaves", "Blossom blight - flowers turn black and drop", "Black sunken spots on fruits", "Stalk-end rot of ripe fruits", "Die-back of young twigs"],
+    "leaf_indicators": {
+      "colors": ["dark brown", "black"],
+      "shapes": ["irregular", "sunken"],
+      "patterns": ["leaf_spots", "blossom_blight"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few leaf spots, slight blossom blight"},
+      {"level": "moderate", "description": "Significant blossom drop, fruit spots visible"},
+      {"level": "severe", "description": "Heavy blossom blight, extensive fruit rot, > 30% loss"}
+    ],
+    "favorable_conditions": {"temp_min": 20, "temp_max": 28, "humidity_min": 80, "rainfall": true},
+    "treatment": ["Spray Carbendazim 50% WP @ 1g/L at flowering", "Thiophanate Methyl 70% WP @ 1g/L", "Copper oxychloride 50% WP @ 3g/L"],
+    "prevention": ["Prune dead wood and crowded branches", "Pre-bloom spray of Copper oxychloride", "Post-harvest hot water treatment of fruits (52°C, 5 min)", "Proper orchard sanitation"],
+    "organic_treatment": ["Bordeaux mixture 1% spray at flowering", "Neem oil 3% spray", "Bio-agents Trichoderma viride spray"],
+    "image_keywords": "black blossom blight, sunken fruit spots, twig die-back, irregular leaf spots",
+    "affected_plant_part": "flower"
+  },
+  {
+    "name": "Mango Powdery Mildew",
+    "name_hindi": "Aam ka Choorni Asita",
+    "crop_name": "Mango",
+    "pathogen_type": "fungal",
+    "symptoms": ["White powdery coating on inflorescence (panicles)", "Affected flowers do not open and drop prematurely", "Young fruits covered with white powder and drop", "White patches on young leaves"],
+    "leaf_indicators": {
+      "colors": ["white powdery"],
+      "shapes": ["coating"],
+      "patterns": ["inflorescence_coating", "young_leaf_patches"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Slight powdery coating on some panicles"},
+      {"level": "moderate", "description": "Widespread powder on panicles, flower drop 20-50%"},
+      {"level": "severe", "description": "Heavy powder, > 50% flower drop, minimal fruit set"}
+    ],
+    "favorable_conditions": {"temp_min": 15, "temp_max": 25, "humidity_min": 60, "rainfall": false},
+    "treatment": ["Spray wettable Sulphur 80% WP @ 2g/L at panicle emergence", "Karathane (Dinocap) 48% EC @ 1ml/L", "Hexaconazole 5% EC @ 2ml/L"],
+    "prevention": ["Two sprays of Sulphur - at panicle emergence and 15 days later", "Avoid excess shade in orchard", "Good air circulation through pruning"],
+    "organic_treatment": ["Wettable sulphur 2g/L (organic approved)", "Neem oil 3% spray", "Milk spray (1:9 ratio with water) as traditional remedy"],
+    "image_keywords": "white powder on panicles, powder on young fruits, coated flowers",
+    "affected_plant_part": "flower"
+  },
+  {
+    "name": "Mango Malformation",
+    "name_hindi": "Aam ka Vikruti Rog",
+    "crop_name": "Mango",
+    "pathogen_type": "fungal",
+    "symptoms": ["Abnormal compact bunchy growth of panicles", "Flowers enlarged, remain green and do not set fruit", "Vegetative malformation - small shoots with short internodes", "Affected panicles dry up but persist on tree"],
+    "leaf_indicators": {
+      "colors": ["green", "abnormal"],
+      "shapes": ["compact bunchy"],
+      "patterns": ["short_internodes", "no_fruiting"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "< 10% panicles malformed"},
+      {"level": "moderate", "description": "10-30% panicles affected"},
+      {"level": "severe", "description": "> 30% panicles affected, significant yield loss"}
+    ],
+    "favorable_conditions": {"temp_min": 15, "temp_max": 25, "humidity_min": 70, "rainfall": false},
+    "treatment": ["Remove and destroy malformed panicles with 15-20 cm of supporting branch", "Spray NAA (Naphthalene Acetic Acid) @ 200 ppm in October", "Deblossoming of affected panicles"],
+    "prevention": ["Use disease-free planting material", "Regular pruning of malformed parts", "Avoid mites (Eriophyid) which may spread the fungus", "Maintain tree health with balanced nutrition"],
+    "organic_treatment": ["Physical removal and destruction of malformed panicles", "Neem oil spray for mite vector control", "Maintain overall tree health"],
+    "image_keywords": "compact bunchy panicle, green enlarged flowers, short internodes, no fruit",
+    "affected_plant_part": "flower"
+  },
+  {
+    "name": "Brinjal Fruit and Shoot Borer",
+    "name_hindi": "Baingan ka Phal evam Tana Chhedak",
+    "crop_name": "Brinjal",
+    "pathogen_type": "insect",
+    "symptoms": ["Drooping and wilting of young shoots (shoot boring)", "Bore holes on fruits with frass (excrement)", "Internal feeding damage in fruits", "Shoots wilt from top downwards"],
+    "leaf_indicators": {
+      "colors": ["wilted green", "brown"],
+      "shapes": ["drooping shoots"],
+      "patterns": ["bore_holes", "frass"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "< 10% shoots/fruits affected"},
+      {"level": "moderate", "description": "10-30% shoots/fruits bored"},
+      {"level": "severe", "description": "> 30% damage, heavy fruit loss"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 35, "humidity_min": 60, "rainfall": false},
+    "treatment": ["Spray Emamectin Benzoate 5% SG @ 0.4g/L", "Spinosad 45% SC @ 0.3ml/L", "Neem oil 5ml/L at 10-day intervals"],
+    "prevention": ["Remove and destroy affected shoots weekly", "Install pheromone traps @ 5/acre for monitoring", "Grow marigold as trap crop along borders", "Avoid monoculture"],
+    "organic_treatment": ["Neem oil 5ml/L regular spray", "Bt (Bacillus thuringiensis) spray @ 2g/L", "Pheromone traps for mass trapping", "Hand-picking and destruction of bored fruits"],
+    "image_keywords": "drooping wilted shoots, bore holes in fruit, frass",
+    "affected_plant_part": "shoot"
+  },
+  {
+    "name": "Brinjal Little Leaf (Phytoplasma)",
+    "name_hindi": "Baingan ka Chhota Patti Rog",
+    "crop_name": "Brinjal",
+    "pathogen_type": "phytoplasma",
+    "symptoms": ["Extreme reduction in leaf size", "Proliferation of axillary buds giving bushy look", "Phyllody - flowers become leaf-like structures", "Stunted plant with no fruit production"],
+    "leaf_indicators": {
+      "colors": ["pale green", "yellow-green"],
+      "shapes": ["extremely small"],
+      "patterns": ["bushy_proliferation", "phyllody"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few plants showing small leaves"},
+      {"level": "moderate", "description": "Pronounced little leaf, bushy growth, 10-25% plants"},
+      {"level": "severe", "description": "Widespread, phyllody, no fruiting, > 25% plants"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 35, "humidity_min": 60, "rainfall": false},
+    "treatment": ["Remove and destroy infected plants immediately", "Control leafhopper vector: Imidacloprid 17.8% SL @ 0.3ml/L", "Dimethoate 30% EC @ 1.5ml/L for leafhoppers", "Tetracycline drench (250 ppm) - temporary suppression only"],
+    "prevention": ["Use healthy seedlings from disease-free nursery", "Control leafhopper vectors from nursery stage", "Remove infected plants on detection", "Avoid planting near infected Solanaceae"],
+    "organic_treatment": ["Neem oil spray for leafhopper control", "Sticky traps for leafhopper monitoring", "Immediate removal and destruction of infected plants"],
+    "image_keywords": "tiny leaves, bushy proliferation, leaf-like flowers, stunted plant",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Brinjal Phomopsis Blight",
+    "name_hindi": "Baingan ka Phomopsis Angmari",
+    "crop_name": "Brinjal",
+    "pathogen_type": "fungal",
+    "symptoms": ["Circular brown spots on leaves with concentric rings", "Dark brown sunken lesions on fruits", "Damping off of seedlings in nursery", "Stem canker near soil line"],
+    "leaf_indicators": {
+      "colors": ["brown", "dark brown"],
+      "shapes": ["circular"],
+      "patterns": ["concentric_rings", "fruit_lesions"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few leaf spots and small fruit lesions"},
+      {"level": "moderate", "description": "Multiple fruit lesions, some fruit rot"},
+      {"level": "severe", "description": "Heavy fruit rot, defoliation, seedling death in nursery"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 32, "humidity_min": 80, "rainfall": true},
+    "treatment": ["Spray Carbendazim 50% WP @ 1g/L", "Mancozeb 75% WP @ 2.5g/L", "Copper oxychloride 50% WP @ 3g/L"],
+    "prevention": ["Use disease-free seed", "Seed treatment with Thiram @ 3g/kg", "Crop rotation for 2-3 years", "Remove crop debris"],
+    "organic_treatment": ["Trichoderma viride seed treatment", "Neem oil 3% spray", "Bordeaux mixture 1%"],
+    "image_keywords": "brown concentric leaf spots, sunken fruit lesions, damping off",
+    "affected_plant_part": "fruit"
+  },
+  {
+    "name": "Okra Yellow Vein Mosaic Virus",
+    "name_hindi": "Bhindi ka Peela Nasha Rog",
+    "crop_name": "Okra",
+    "pathogen_type": "viral",
+    "symptoms": ["Interwoven network of yellow veins on leaves (vein clearing)", "Complete yellowing of veins and veinlets", "Fruits become small, malformed and yellow-green", "Stunted plant growth with reduced yield"],
+    "leaf_indicators": {
+      "colors": ["yellow veins", "green interveinal"],
+      "shapes": ["normal to slightly curled"],
+      "patterns": ["vein_clearing", "yellow_vein_network"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Faint vein clearing on a few plants"},
+      {"level": "moderate", "description": "Prominent yellow vein network, 10-40% plants"},
+      {"level": "severe", "description": "Severe yellowing, stunting, malformed fruits, > 40% plants"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 35, "humidity_min": 60, "rainfall": false},
+    "treatment": ["Control whitefly vector: Imidacloprid 17.8% SL @ 0.3ml/L", "Acetamiprid 20% SP @ 0.3g/L", "Remove and destroy infected plants"],
+    "prevention": ["Grow resistant varieties (Arka Anamika, Punjab Padmini, Pusa Sawani)", "Seed treatment with Imidacloprid 70% WS @ 7g/kg", "Install yellow sticky traps for whitefly", "Avoid growing near cotton (whitefly host)"],
+    "organic_treatment": ["Neem oil 5ml/L spray for whitefly", "Yellow sticky traps @ 12/acre", "Intercropping with maize as barrier crop"],
+    "image_keywords": "yellow vein network, vein clearing, malformed fruits, stunted",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Okra Powdery Mildew",
+    "name_hindi": "Bhindi ka Choorni Asita",
+    "crop_name": "Okra",
+    "pathogen_type": "fungal",
+    "symptoms": ["White powdery patches on upper surface of leaves", "Patches spread to cover entire leaf", "Leaves turn yellow and dry prematurely", "Reduced fruit size and yield"],
+    "leaf_indicators": {
+      "colors": ["white powdery", "yellow"],
+      "shapes": ["patches"],
+      "patterns": ["upper_surface", "spreading"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Small white patches on a few leaves"},
+      {"level": "moderate", "description": "Widespread white coating, yellowing starting"},
+      {"level": "severe", "description": "Complete leaf coverage, premature defoliation"}
+    ],
+    "favorable_conditions": {"temp_min": 20, "temp_max": 28, "humidity_min": 60, "rainfall": false},
+    "treatment": ["Spray wettable Sulphur 80% WP @ 2g/L", "Carbendazim 50% WP @ 1g/L", "Hexaconazole 5% EC @ 2ml/L"],
+    "prevention": ["Proper spacing for air circulation", "Avoid overhead irrigation", "Remove plant debris"],
+    "organic_treatment": ["Wettable sulphur spray", "Neem oil 3% spray", "Milk spray (1:9 with water)"],
+    "image_keywords": "white powder on leaves, yellow leaves, premature drying",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Cauliflower Black Rot",
+    "name_hindi": "Phool Gobhi ka Kala Sadan",
+    "crop_name": "Cauliflower",
+    "pathogen_type": "bacterial",
+    "symptoms": ["V-shaped yellow to brown lesions from leaf margins", "Blackening of veins (characteristic symptom)", "Leaves become dry and papery", "Curd (head) turns brown to black and rots"],
+    "leaf_indicators": {
+      "colors": ["yellow-brown", "black veins"],
+      "shapes": ["V-shaped"],
+      "patterns": ["margin_to_midrib", "vein_blackening"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "V-shaped lesions on outer leaves only"},
+      {"level": "moderate", "description": "Multiple leaves affected, vein blackening visible"},
+      {"level": "severe", "description": "Curd infection, widespread vein blackening, > 30% loss"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 32, "humidity_min": 80, "rainfall": true},
+    "treatment": ["Spray Streptocycline @ 100 ppm + Copper oxychloride @ 2.5g/L", "Copper hydroxide 77% WP @ 2g/L"],
+    "prevention": ["Use disease-free seed", "Hot water seed treatment (50°C for 25 min)", "Crop rotation for 2-3 years with non-cruciferous crops", "Avoid overhead irrigation"],
+    "organic_treatment": ["Copper-based sprays (Bordeaux mixture)", "Seed treatment with hot water", "Proper field hygiene and crop rotation"],
+    "image_keywords": "V-shaped lesions, black veins, brown curd rot, papery leaves",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Cauliflower Downy Mildew",
+    "name_hindi": "Phool Gobhi ka Mridu Asita",
+    "crop_name": "Cauliflower",
+    "pathogen_type": "fungal",
+    "symptoms": ["Purplish-brown spots on upper leaf surface", "White downy growth on corresponding undersurface", "Seedlings damp off in nursery", "Curd turns brown with downy growth in severe cases"],
+    "leaf_indicators": {
+      "colors": ["purplish-brown", "white"],
+      "shapes": ["irregular spots"],
+      "patterns": ["upper_purple_lower_white"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few spots on lower leaves"},
+      {"level": "moderate", "description": "Widespread spots, downy growth visible"},
+      {"level": "severe", "description": "Heavy infection, curd browning, nursery damping off"}
+    ],
+    "favorable_conditions": {"temp_min": 10, "temp_max": 20, "humidity_min": 85, "rainfall": true},
+    "treatment": ["Spray Metalaxyl + Mancozeb (Ridomil MZ) @ 2.5g/L", "Mancozeb 75% WP @ 2.5g/L prophylactically"],
+    "prevention": ["Good drainage", "Proper spacing", "Avoid overhead irrigation", "Use resistant varieties"],
+    "organic_treatment": ["Bordeaux mixture 1% spray", "Trichoderma viride application", "Improve air circulation"],
+    "image_keywords": "purple spots, white downy undersurface, nursery damping off",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Cauliflower Clubroot",
+    "name_hindi": "Phool Gobhi ka Jad Gath Rog",
+    "crop_name": "Cauliflower",
+    "pathogen_type": "fungal",
+    "symptoms": ["Swollen club-shaped roots", "Wilting of plants during hot afternoons", "Stunted growth and yellowing leaves", "Plants pulled up show grotesque root swellings"],
+    "leaf_indicators": {
+      "colors": ["yellow-green", "wilted"],
+      "shapes": ["wilted"],
+      "patterns": ["afternoon_wilt_recovery"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Small root galls, slight wilting"},
+      {"level": "moderate", "description": "Large galls, regular afternoon wilting, stunting"},
+      {"level": "severe", "description": "Massive root clubs, plant death, no curd formation"}
+    ],
+    "favorable_conditions": {"temp_min": 18, "temp_max": 25, "humidity_min": 70, "rainfall": true},
+    "treatment": ["Soil drenching with Carbendazim 50% WP @ 1g/L", "Apply lime to raise soil pH above 7.2"],
+    "prevention": ["Maintain soil pH 7.0-7.5 with lime application", "Long crop rotation (5-7 years for cruciferous crops)", "Use resistant varieties", "Avoid waterlogging"],
+    "organic_treatment": ["Lime application to raise pH", "Long rotation with non-cruciferous crops", "Bio-agents in planting holes"],
+    "image_keywords": "club-shaped swollen roots, afternoon wilting, stunted yellowing plants",
+    "affected_plant_part": "root"
+  },
+  {
+    "name": "Turmeric Leaf Blotch",
+    "name_hindi": "Haldi ka Patti Dhabba Rog",
+    "crop_name": "Turmeric",
+    "pathogen_type": "fungal",
+    "symptoms": ["Oval to irregular brown spots on both surfaces of leaves", "Spots have yellowish halo", "Spots enlarge and coalesce", "Leaves dry up in severe infections"],
+    "leaf_indicators": {
+      "colors": ["brown", "yellow halo"],
+      "shapes": ["oval", "irregular"],
+      "patterns": ["both_surfaces", "coalescing"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few spots on lower leaves"},
+      {"level": "moderate", "description": "Widespread spots, yellowing"},
+      {"level": "severe", "description": "Extensive leaf drying, reduced rhizome yield"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 30, "humidity_min": 80, "rainfall": true},
+    "treatment": ["Spray Mancozeb 75% WP @ 2.5g/L", "Carbendazim 50% WP @ 1g/L", "Copper oxychloride 50% WP @ 3g/L"],
+    "prevention": ["Use disease-free rhizomes for planting", "Treat rhizomes with Mancozeb before planting", "Proper drainage", "Crop rotation"],
+    "organic_treatment": ["Bordeaux mixture 1% spray", "Neem oil 3% spray", "Trichoderma viride application"],
+    "image_keywords": "oval brown spots, yellow halo, coalescing spots, leaf drying",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Turmeric Rhizome Rot",
+    "name_hindi": "Haldi ka Kand Sadan",
+    "crop_name": "Turmeric",
+    "pathogen_type": "fungal",
+    "symptoms": ["Yellowing and wilting of leaves from lower portion", "Water-soaked lesions on collar region", "Soft rot of rhizomes with foul smell", "Brown discoloration of rhizome tissue", "Plant collapses when pulled"],
+    "leaf_indicators": {
+      "colors": ["yellow", "wilted"],
+      "shapes": ["drooping"],
+      "patterns": ["lower_leaves_first"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few plants showing yellowing"},
+      {"level": "moderate", "description": "Multiple plants wilting, collar rot visible"},
+      {"level": "severe", "description": "Widespread plant death, rhizome rot, > 25% loss"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 35, "humidity_min": 85, "rainfall": true},
+    "treatment": ["Soil drenching with Copper oxychloride 50% WP @ 3g/L", "Metalaxyl + Mancozeb drench around affected plants", "Remove and destroy affected plants"],
+    "prevention": ["Use disease-free seed rhizomes", "Rhizome treatment with Mancozeb + Carbendazim before planting", "Good drainage and avoid waterlogging", "Crop rotation for 3-4 years"],
+    "organic_treatment": ["Trichoderma viride + Pseudomonas fluorescens rhizome treatment", "Neem cake @ 200 kg/ha", "Proper drainage management"],
+    "image_keywords": "yellowing wilting, collar rot, soft rotting rhizome, foul smell",
+    "affected_plant_part": "rhizome"
+  },
+  {
+    "name": "Turmeric Leaf Spot (Colletotrichum)",
+    "name_hindi": "Haldi ka Patti Dhabba",
+    "crop_name": "Turmeric",
+    "pathogen_type": "fungal",
+    "symptoms": ["Elongated dark brown to black spots on leaves", "Spots appear on both surfaces", "Spots coalesce to form large necrotic areas", "Leaf tips and margins dry first"],
+    "leaf_indicators": {
+      "colors": ["dark brown", "black"],
+      "shapes": ["elongated"],
+      "patterns": ["both_surfaces", "tip_margin_first"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few elongated spots"},
+      {"level": "moderate", "description": "Multiple spots coalescing"},
+      {"level": "severe", "description": "Extensive necrosis, premature leaf fall"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 32, "humidity_min": 80, "rainfall": true},
+    "treatment": ["Spray Carbendazim 50% WP @ 1g/L", "Mancozeb 75% WP @ 2.5g/L"],
+    "prevention": ["Disease-free rhizomes", "Proper spacing", "Field sanitation"],
+    "organic_treatment": ["Bordeaux mixture 1%", "Neem oil spray", "Crop debris removal"],
+    "image_keywords": "elongated dark spots, necrotic areas, tip drying",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Arhar (Pigeon Pea) Wilt",
+    "name_hindi": "Arhar ka Uktha Rog",
+    "crop_name": "Arhar",
+    "pathogen_type": "fungal",
+    "symptoms": ["Partial or complete wilting of plant", "Browning and blackening of roots and stem base", "Internal vascular browning visible in split stem", "Leaves dry on plant without shedding"],
+    "leaf_indicators": {
+      "colors": ["dry brown", "yellow"],
+      "shapes": ["wilted"],
+      "patterns": ["whole_plant_wilt"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Scattered wilting plants"},
+      {"level": "moderate", "description": "Patches of dead plants, 10-25%"},
+      {"level": "severe", "description": "Widespread mortality, > 25%"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 30, "humidity_min": 70, "rainfall": true},
+    "treatment": ["Seed treatment with Carbendazim 50% WP @ 2g/kg + Thiram @ 2g/kg", "Soil application of Trichoderma viride @ 2.5 kg/ha"],
+    "prevention": ["Use wilt-resistant varieties (IPA 203, Asha-ICPL 87119)", "Crop rotation with cereals for 3-4 years", "Deep summer ploughing", "Mixed/intercropping with sorghum"],
+    "organic_treatment": ["Trichoderma viride seed treatment + soil application", "Neem cake @ 250 kg/ha", "Bio-enriched FYM application"],
+    "image_keywords": "wilted plant, dry leaves attached, brown vascular tissue, blackened roots",
+    "affected_plant_part": "whole_plant"
+  },
+  {
+    "name": "Arhar Sterility Mosaic",
+    "name_hindi": "Arhar ka Banjhpan Mosaic Rog",
+    "crop_name": "Arhar",
+    "pathogen_type": "viral",
+    "symptoms": ["Mosaic mottling and chlorosis of leaves", "Bushy appearance due to excessive branching", "Leaves become small and pale green", "Complete sterility - no flowering or podding"],
+    "leaf_indicators": {
+      "colors": ["pale green", "mosaic"],
+      "shapes": ["small", "bushy"],
+      "patterns": ["mosaic_mottling", "excessive_branching"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Faint mosaic on a few plants"},
+      {"level": "moderate", "description": "Pronounced mosaic, bushiness, 10-30% plants"},
+      {"level": "severe", "description": "Complete sterility, > 30% plants affected"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 35, "humidity_min": 60, "rainfall": false},
+    "treatment": ["Control eriophyid mite vector: Wettable Sulphur 80% WP @ 3g/L", "Dicofol 18.5% EC @ 2.5ml/L for mites", "Remove and destroy infected plants"],
+    "prevention": ["Use resistant varieties (ICP 7035, ICPL 87119)", "Early sowing", "Rogue infected plants regularly", "Intercropping with sorghum"],
+    "organic_treatment": ["Wettable sulphur for mite control", "Neem oil 5ml/L spray", "Physical removal of infected plants"],
+    "image_keywords": "mosaic leaves, bushy plant, small pale leaves, no pods",
+    "affected_plant_part": "leaf"
+  },
+  {
+    "name": "Rice Brown Spot",
+    "name_hindi": "Dhan ka Bhura Dhabba Rog",
+    "crop_name": "Rice",
+    "pathogen_type": "fungal",
+    "symptoms": ["Oval to circular brown spots on leaves", "Spots have gray center and dark brown margin", "Spots on leaf sheath and glumes", "Dark brown to black spots on grains (glume discoloration)"],
+    "leaf_indicators": {
+      "colors": ["brown", "gray center", "dark brown margin"],
+      "shapes": ["oval", "circular"],
+      "patterns": ["scattered_spots"]
+    },
+    "severity_levels": [
+      {"level": "mild", "description": "Few spots on leaves, < 10% area"},
+      {"level": "moderate", "description": "Multiple spots, grain discoloration starting"},
+      {"level": "severe", "description": "Heavy spots, grain discoloration, poor grain quality"}
+    ],
+    "favorable_conditions": {"temp_min": 25, "temp_max": 30, "humidity_min": 80, "rainfall": true},
+    "treatment": ["Spray Mancozeb 75% WP @ 2.5g/L", "Propiconazole 25% EC @ 1ml/L", "Edifenphos 50% EC @ 1ml/L"],
+    "prevention": ["Use certified disease-free seed", "Balanced fertilization (adequate K and P)", "Avoid nutrient-deficient conditions", "Seed treatment with Carbendazim"],
+    "organic_treatment": ["Pseudomonas fluorescens seed treatment", "Trichoderma viride foliar spray", "Balanced organic nutrition"],
+    "image_keywords": "oval brown spots, gray center brown margin, grain discoloration",
+    "affected_plant_part": "leaf"
+  }
+]
