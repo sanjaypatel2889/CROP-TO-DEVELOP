@@ -75,6 +75,15 @@ app.use('/api/pests', pestRoutes);
 app.use('/api/schemes', schemeRoutes);
 
 // ============================================================
+// Serve Frontend (production)
+// ============================================================
+const frontendPath = path.join(__dirname, '..', 'frontend', 'dist');
+app.use(express.static(frontendPath));
+app.get('*', (req, res) => {
+    res.sendFile(path.join(frontendPath, 'index.html'));
+});
+
+// ============================================================
 // Error Handling
 // ============================================================
 app.use(errorHandler);
